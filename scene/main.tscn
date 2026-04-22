@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://5r0gs8odikua"]
 
-[ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/Table.glb" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
 
 [node name="Main" type="Node3D" unique_id=2118389225]
 
 [node name="Table" parent="." unique_id=281560904 instance=ExtResource("1_itxqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06785631, 3.6263514, 0.011863291)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.06785631, 3.6263514, 0.011863291)
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1847539413]
 transform = Transform3D(1, 0, 0, 0, 0.9990762, -0.04297422, 0, 0.04297422, 0.9990762, -0.010593891, 8.801351, -8.921594)
 
 [node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1127543710]
 transform = Transform3D(-0.99995655, -0.0004012694, -0.009328814, -0.0013741977, 0.9945217, 0.10452208, 0.009235767, 0.104530305, -0.9944788, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Node3D/Camera3D" unique_id=376703458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.820766e-10, 8.381903e-09, -0.54776645)
+target_position = Vector3(0, -1, -20)
