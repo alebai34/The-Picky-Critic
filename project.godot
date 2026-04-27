@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="The Picky Critic"
+run/main_scene="uid://5r0gs8odikua"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [physics]
 
