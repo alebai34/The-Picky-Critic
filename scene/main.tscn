@@ -16,3 +16,5 @@ transform = Transform3D(-0.99995655, -0.0004012694, -0.009328814, -0.0013741977,
 [node name="RayCast3D" type="RayCast3D" parent="Node3D/Camera3D" unique_id=376703458]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.820766e-10, 8.381903e-09, -0.54776645)
 target_position = Vector3(0, -1, -20)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=358208603]
