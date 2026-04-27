@@ -12,10 +12,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.0
 [node name="AcceptButton" parent="." unique_id=601712538 instance=ExtResource("2_wp4xf")]
 transform = Transform3D(16.565315, 0, -11.206709, 0, 20, 0, 11.206709, 0, 16.565315, -1.4364643, 5.6762524, -2.6172903)
 
-<<<<<<< HEAD
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
 transform = Transform3D(-0.999821, 0, 0.018918252, 0, 1, 0, -0.018918252, 0, -0.999821, 0.014669418, 9.570811, -7.4344616)
-=======
+
 [node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1127543710]
 transform = Transform3D(-0.99995655, -0.0004012694, -0.009328814, -0.0013741977, 0.9945217, 0.10452208, 0.009235767, 0.104530305, -0.9944788, 0, 0, 0)
 
