@@ -7,12 +7,11 @@
 [node name="NPC" type="CharacterBody3D" unique_id=1006315584]
 script = ExtResource("1_ideak")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="." unique_id=605710872]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99843913, 0)
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=623250776]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=515722422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99843913, 0)
 mesh = SubResource("CapsuleMesh_xxcha")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2037157258]
-root_node = NodePath("../NavigationLink3D")
+root_node = NodePath("")
