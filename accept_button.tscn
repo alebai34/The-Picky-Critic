@@ -8,8 +8,8 @@
 [node name="AcceptButton" type="Node3D" unique_id=601712538]
 script = ExtResource("1_tlq2j")
 
+[node name="button" parent="." unique_id=527309751 instance=ExtResource("2_bnp6r")]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1796857939]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.035, 0)
 shape = SubResource("BoxShape3D_x1ud2")
-
-[node name="button" parent="." unique_id=527309751 instance=ExtResource("2_bnp6r")]
