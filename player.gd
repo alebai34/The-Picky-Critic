@@ -12,7 +12,10 @@ var can_look := true
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	ray_cast_3d.enabled = true
-
+	
+func _process(delta):
+	return
+	
 func _input(event):
 	#ESC toggles locked mouse
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
@@ -23,11 +26,10 @@ func _input(event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	#interact detection
-	if event.is_action_pressed("interact"):
-		if ray_cast_3d.is_colliding():
-			var collider = ray_cast_3d.get_collider()
-			if collider.has_method("interact"):
-				collider.interact()
+	if event.is_action_pressed("interact") and ray_cast_3d.is_colliding():
+		var collider = ray_cast_3d.get_collider()
+		if collider.has_method("interact"):
+			collider.interact()
 	
 		return
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dim3gk6iamfhm"]
 
 [ext_resource type="Script" uid="uid://b6ttk3yiwum4p" path="res://player.gd" id="1_xhfnw"]
-[ext_resource type="Script" uid="uid://chg4yqc20uvyb" path="res://dot_crosshair.gd" id="2_kpjcp"]
+[ext_resource type="Script" path="res://dot_crosshair.gd" id="2_kpjcp"]
 
 [node name="Player" type="Node3D" unique_id=1608918345]
 script = ExtResource("1_xhfnw")
@@ -10,7 +10,9 @@ script = ExtResource("1_xhfnw")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=446825470]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.820766e-10, 8.381903e-09, -0.54776645)
-target_position = Vector3(0, -1, -20)
+target_position = Vector3(0, 0, -20)
+collide_with_areas = true
+collide_with_bodies = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera3D" unique_id=1260114410]
 
