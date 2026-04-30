@@ -8,10 +8,10 @@
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 23.904251, 0, -21.219456, 0, 0, 0, 0, 0, 0, 24.07117, 0, -8.283261, 0, 0, 0, 0, 0, 0, -0.38241005, 0, -8.366721),
-"tilts": PackedFloat32Array(0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 64.264084, -7.6293945e-06, 63.510075, 0, 0, 0, 0, 0, 0, 10.830903, -7.6293945e-06, 64.229866, 0, 0, 0, 0, 0, 0, 10.199118, -7.6293945e-06, 0.39116383, 0, 0, 0, 0, 0, 0, 63.746716, -7.6293945e-06, -0.64357233, 0, 0, 0, 0, 0, 0, 64.00541, -7.6293945e-06, 59.8885),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
-point_count = 3
+point_count = 5
 
 [node name="Main" type="Node3D" unique_id=2118389225]
 
@@ -28,8 +28,7 @@ transform = Transform3D(-0.999821, 0, 0.018918252, 0, 1, 0, -0.018918252, 0, -0.
 curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
-transform = Transform3D(0.003412666, 0, 0.9999921, 0, 1, 0, -0.9999921, 0, 0.003412666, -0.38241005, 0, -8.366722)
-progress = 37.390945
+transform = Transform3D(-0.013469617, 0, 0.9999038, 0, 1, 0, -0.9999038, 0, -0.013469617, 64.264084, -7.6293945e-06, 63.510075)
 script = ExtResource("4_0ha60")
 
 [node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
