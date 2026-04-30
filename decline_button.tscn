@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://csfpopm1x7rsw"]
+
+[ext_resource type="Script" uid="uid://oh3y1mwlnlmo" path="res://decline_button.gd" id="1_g0gu1"]
+[ext_resource type="PackedScene" uid="uid://dvl6wtpbphtpa" path="res://assets/models/button.glb" id="1_xcf7y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g0gu1"]
+
+[node name="DeclineButton" type="Area3D" unique_id=1139406235]
+script = ExtResource("1_g0gu1")
+
+[node name="button" parent="." unique_id=527309751 instance=ExtResource("1_xcf7y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2006413319]
+transform = Transform3D(0.05, 0, 0, 0, 0.02177134, 0, 0, 0, 0.05, 0, 0.02156871, 0)
+shape = SubResource("BoxShape3D_g0gu1")

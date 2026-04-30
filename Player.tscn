@@ -1,13 +1,30 @@
 [gd_scene format=3 uid="uid://dim3gk6iamfhm"]
 
 [ext_resource type="Script" uid="uid://b6ttk3yiwum4p" path="res://player.gd" id="1_xhfnw"]
+[ext_resource type="Script" path="res://dot_crosshair.gd" id="2_kpjcp"]
 
-[node name="Player" type="Node3D" unique_id=1608918345 node_paths=PackedStringArray("ray_cast_3d")]
+[node name="Player" type="Node3D" unique_id=1608918345]
 script = ExtResource("1_xhfnw")
-ray_cast_3d = NodePath("Camera3D/RayCast3D")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=918874127]
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=446825470]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.820766e-10, 8.381903e-09, -0.54776645)
-target_position = Vector3(0, -1, -20)
+target_position = Vector3(0, 0, -20)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera3D" unique_id=1260114410]
+
+[node name="CenterContainer" type="CenterContainer" parent="Camera3D/CanvasLayer" unique_id=683712527]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DotCrosshair" type="Control" parent="Camera3D/CanvasLayer/CenterContainer" unique_id=1097165399]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+script = ExtResource("2_kpjcp")
