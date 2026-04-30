@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://5r0gs8odikua"]
 
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
-[ext_resource type="PackedScene" uid="uid://c2yqa4fol6lhp" path="res://accept_button.tscn" id="2_wp4xf"]
-[ext_resource type="PackedScene" uid="uid://dim3gk6iamfhm" path="res://Player.tscn" id="3_brvut"]
-
-[ext_resource type="Script" uid="uid://bvrhc36ufeh15" path="res://scene/path_follow_3d.gd" id="4_0ha60"]
-[ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://npc.tscn" id="5_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://c2yqa4fol6lhp" path="res://scene/accept_button.tscn" id="2_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://dim3gk6iamfhm" path="res://scene/Player.tscn" id="3_brvut"]
+[ext_resource type="Script" path="res://scene/path_follow_3d.gd" id="4_0ha60"]
+[ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -13,7 +12,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
-
 
 [node name="Main" type="Node3D" unique_id=2118389225]
 
@@ -37,4 +35,3 @@ script = ExtResource("4_0ha60")
 [node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
-

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csfpopm1x7rsw"]
 
-[ext_resource type="Script" uid="uid://oh3y1mwlnlmo" path="res://decline_button.gd" id="1_g0gu1"]
+[ext_resource type="Script" uid="uid://oh3y1mwlnlmo" path="res://scripts/decline_button.gd" id="1_g0gu1"]
 [ext_resource type="PackedScene" uid="uid://dvl6wtpbphtpa" path="res://assets/models/button.glb" id="1_xcf7y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g0gu1"]
