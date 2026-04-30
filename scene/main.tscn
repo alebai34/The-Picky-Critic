@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://c2yqa4fol6lhp" path="res://accept_button.tscn" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://dim3gk6iamfhm" path="res://Player.tscn" id="3_brvut"]
-<<<<<<< Updated upstream
-=======
+
 [ext_resource type="Script" uid="uid://bvrhc36ufeh15" path="res://scene/path_follow_3d.gd" id="4_0ha60"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://npc.tscn" id="5_4j5ol"]
 
@@ -14,7 +13,7 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
->>>>>>> Stashed changes
+
 
 [node name="Main" type="Node3D" unique_id=2118389225]
 
@@ -26,8 +25,6 @@ transform = Transform3D(16.565315, 0, -11.206709, 0, 20, 0, 11.206709, 0, 16.565
 
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
 transform = Transform3D(-0.999821, 0, 0.018918252, 0, 1, 0, -0.018918252, 0, -0.999821, 0.014669418, 9.570811, -7.4344616)
-<<<<<<< Updated upstream
-=======
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1196724721]
 curve = SubResource("Curve3D_p1hux")
@@ -40,4 +37,4 @@ script = ExtResource("4_0ha60")
 [node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
->>>>>>> Stashed changes
+
