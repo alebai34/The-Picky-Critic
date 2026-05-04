@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://c2yqa4fol6lhp" path="res://scene/accept_button.tscn" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://dim3gk6iamfhm" path="res://scene/Player.tscn" id="3_brvut"]
+[ext_resource type="PackedScene" uid="uid://fy5v7jomko3c" path="res://XIC.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="6_4j5ol"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -16,6 +18,9 @@ point_count = 5
 
 [node name="Table" parent="." unique_id=281560904 instance=ExtResource("1_itxqv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.06785631, 3.6263514, 0.011863291)
+
+[node name="XIC" parent="." unique_id=1897864472 instance=ExtResource("5_0ha60")]
+transform = Transform3D(0.9999954, 0, -0.0030368683, 0, 1, 0, 0.0030368683, 0, 0.9999954, 4.8156013, 6.082494, 2.0877883)
 
 [node name="AcceptButton" parent="." unique_id=601712538 instance=ExtResource("2_wp4xf")]
 transform = Transform3D(16.565315, 0, -11.206709, 0, 20, 0, 11.206709, 0, 16.565315, -1.4364643, 5.6762524, -2.6172903)
@@ -32,3 +37,6 @@ transform = Transform3D(-0.0030671586, 2.822515e-07, 0.99999005, 0, 1, -2.822513
 [node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
+
+[node name="Tentacle2" parent="." unique_id=1768528003 instance=ExtResource("6_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32166195, 5.6686764, -0.15800858)
