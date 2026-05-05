@@ -50,7 +50,9 @@ func _input(event):
 			deg_to_rad(-80),
 			deg_to_rad(80)
 		)
- 
+
+# XIC/Interactions. 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if _held_xic != null:
