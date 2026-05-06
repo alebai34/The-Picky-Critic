@@ -1,13 +1,19 @@
-[gd_scene format=3 uid="uid://d14y76ebs5o6i"]
+[gd_scene format=3 uid="uid://gfdjqvgj7l4o"]
 
-[ext_resource type="Script" uid="uid://cs1d5jjnxqe3m" path="res://NPC.gd" id="1_ideak"]
+[ext_resource type="Script" uid="uid://cs1d5jjnxqe3m" path="res://scripts/NPC.gd" id="1_ideak"]
+[ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="2_54ctn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xxcha"]
 
 [node name="NPC" type="CharacterBody3D" unique_id=1006315584]
 script = ExtResource("1_ideak")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=623250776]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=527760165]
+
+[node name="HandPoint" type="Marker3D" parent="." unique_id=1622513715]
+
+[node name="Tentacle" parent="HandPoint" unique_id=2060886315 instance=ExtResource("2_54ctn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6921425, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=515722422]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 7.82895, 0)
