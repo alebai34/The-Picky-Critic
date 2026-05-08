@@ -1,20 +1,28 @@
 [gd_scene format=3 uid="uid://c20k0na80bhh3"]
 
 [ext_resource type="Script" uid="uid://cvdoeya24dd1" path="res://scripts/XIC.gd" id="1_p5r1k"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_yolx5"]
+[ext_resource type="PackedScene" uid="uid://dwwn4f4satk8f" path="res://assets/models/Compendium.glb" id="2_pow2e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p5r1k"]
+size = Vector3(0.4173584, 2.6264648, 3.635727)
 
 [node name="XIC" type="Node3D" unique_id=1897864472]
 script = ExtResource("1_p5r1k")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=771760825]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-mesh = SubResource("BoxMesh_yolx5")
+[node name="Compendium" parent="." unique_id=1406888072 instance=ExtResource("2_pow2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9604645e-08, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1163561881]
+[node name="Cube" parent="Compendium" index="0" unique_id=1460182096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0017671585, 0.07577354, 1.3255501)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1931217506]
+[node name="Cube_001" parent="Compendium" index="1" unique_id=1056246830]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.0017671585, 0.07577354, 1.3255501)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=620253685]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1931217506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006652832, 1.4201746, 0.0023880005)
 shape = SubResource("BoxShape3D_p5r1k")
+
+[editable path="Compendium"]

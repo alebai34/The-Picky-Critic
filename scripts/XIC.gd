@@ -23,7 +23,7 @@ var _camera: Camera3D = null
 var _original_parent: Node = null
 var _original_global_transform: Transform3D
 
-@onready var _anim: AnimationPlayer = $AnimationPlayer
+@onready var _anim: AnimationPlayer = $Compendium/AnimationPlayer
 
 # READY
 
@@ -45,7 +45,7 @@ func pickup(player_camera: Camera3D) -> void:
 	_camera.add_child(self)
 	global_transform = saved_global
 
-	if _anim.has_animation("open"):
+	if _anim.has_animation("CubeAction"):
 		_anim.play("open")
 
 	set_process(true)
@@ -58,7 +58,7 @@ func put_down() -> void:
 
 	set_process_unhandled_input(false)
 
-	if _anim.has_animation("close"):
+	if _anim.has_animation("Cube_001Action"):
 		_anim.play("close")
 		await _anim.animation_finished
 
