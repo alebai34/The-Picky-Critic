@@ -46,7 +46,7 @@ func pickup(player_camera: Camera3D) -> void:
 	global_transform = saved_global
 
 	if _anim.has_animation("CubeAction"):
-		_anim.play("open")
+		_anim.play("CubeAction")
 
 	set_process(true)
 	set_process_unhandled_input(true)
@@ -59,7 +59,7 @@ func put_down() -> void:
 	set_process_unhandled_input(false)
 
 	if _anim.has_animation("Cube_001Action"):
-		_anim.play("close")
+		_anim.play("Cube_001Action")
 		await _anim.animation_finished
 
 	is_held = false

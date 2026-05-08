@@ -63,13 +63,10 @@ func _unhandled_input(event: InputEvent) -> void:
  
  
 func _try_interact() -> void:
-	var ray: RayCast3D = $RayCast3D
-	var cam: Camera3D  = $Camera3D
- 
-	if not ray.is_colliding():
+	if not ray_cast_3d.is_colliding():
 		return
  
-	var target = ray.get_collider()
+	var target = ray_cast_3d.get_collider()
  
 	var xic: Node = _find_xic_in_parents(target)
  

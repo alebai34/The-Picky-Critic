@@ -13,7 +13,7 @@ script = ExtResource("1_p5r1k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9604645e-08, 0)
 
 [node name="Cube" parent="Compendium" index="0" unique_id=1460182096]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0017671585, 0.07577354, 1.3255501)
+transform = Transform3D(-1.6292068e-07, 1, 0, -1, -1.6292068e-07, 0, 0, 0, 1, -0.0017671585, 0.07577354, 1.3255501)
 
 [node name="Cube_001" parent="Compendium" index="1" unique_id=1056246830]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.0017671585, 0.07577354, 1.3255501)

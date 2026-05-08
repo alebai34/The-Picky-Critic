@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
 [ext_resource type="PackedScene" path="res://scene/accept_button.tscn" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
+[ext_resource type="PackedScene" uid="uid://c20k0na80bhh3" path="res://scene/XIC.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://gfdjqvgj7l4o" path="res://scene/npc.tscn" id="5_4j5ol"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
@@ -34,3 +35,6 @@ transform = Transform3D(-0.013469617, 0, 0.9999038, 0, 1, 0, -0.9999038, 0, -0.0
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=990750614]
+
+[node name="XIC" parent="." unique_id=1897864472 instance=ExtResource("5_0ha60")]
+transform = Transform3D(0.86066204, 0, 0.5091766, 0, 1, 0, -0.5091766, 0, 0.86066204, 1.7420797, 5.550616, -2.1618576)
