@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://gfdjqvgj7l4o"]
 
-[ext_resource type="Script" uid="uid://cs1d5jjnxqe3m" path="res://scripts/NPC.gd" id="1_ideak"]
+[ext_resource type="Script" uid="uid://bbax7pou2v05m" path="res://scripts/NPC.gd" id="1_54ctn"]
 [ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="2_54ctn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xxcha"]
 
 [node name="NPC" type="CharacterBody3D" unique_id=1006315584]
-script = ExtResource("1_ideak")
+script = ExtResource("1_54ctn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=527760165]
 

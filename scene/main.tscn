@@ -1,17 +1,9 @@
 [gd_scene format=3 uid="uid://5r0gs8odikua"]
 
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" uid="uid://c2yqa4fol6lhp" path="res://accept_button.tscn" id="2_wp4xf"]
-[ext_resource type="PackedScene" uid="uid://dim3gk6iamfhm" path="res://Player.tscn" id="3_brvut"]
-[ext_resource type="Script" uid="uid://bvrhc36ufeh15" path="res://scene/path_follow_3d.gd" id="4_0ha60"]
-[ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://npc.tscn" id="5_4j5ol"]
-=======
-[ext_resource type="PackedScene" uid="uid://cw7umx5ttutds" path="res://scene/accept_button.tscn" id="2_wp4xf"]
-[ext_resource type="PackedScene" path="res://scene/Player.tscn" id="3_brvut"]
-[ext_resource type="PackedScene" uid="uid://c20k0na80bhh3" path="res://scene/XIC.tscn" id="5_0ha60"]
+[ext_resource type="PackedScene" path="res://scene/accept_button.tscn" id="2_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" uid="uid://gfdjqvgj7l4o" path="res://scene/npc.tscn" id="5_4j5ol"]
->>>>>>> Stashed changes
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -36,12 +28,9 @@ curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
 transform = Transform3D(-0.013469617, 0, 0.9999038, 0, 1, 0, -0.9999038, 0, -0.013469617, 64.264084, -7.6293945e-06, 63.510075)
-script = ExtResource("4_0ha60")
 
 [node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
 
-<<<<<<< Updated upstream
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
-=======
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
->>>>>>> Stashed changes
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=990750614]
