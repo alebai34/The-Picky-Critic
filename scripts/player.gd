@@ -8,7 +8,13 @@ var _held_xic: Node = null
 var sensitivity := 0.002
 var can_look := true
 
+signal health_changed(new_hp: int)
 
+var hp := 6 :
+	set(value):
+		hp = clamp(value, 0, 6)
+		health_changed.emit(hp)
+		player.health_changed.connect(health_ui.update_health)
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

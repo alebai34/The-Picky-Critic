@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://7btbwsjpn335"]
+
+[ext_resource type="Script" uid="uid://cwpnv4x4nop30" path="res://heart_container.gd" id="1_nrrdr"]
+
+[node name="HeartContainer" type="Control" unique_id=376623184]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nrrdr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=936785067]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
