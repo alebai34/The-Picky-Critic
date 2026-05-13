@@ -14,7 +14,6 @@ var hp := 6 :
 	set(value):
 		hp = clamp(value, 0, 6)
 		health_changed.emit(hp)
-		player.health_changed.connect(health_ui.update_health)
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

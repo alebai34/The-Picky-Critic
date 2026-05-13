@@ -2,8 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bbax7pou2v05m" path="res://scripts/NPC.gd" id="1_54ctn"]
 [ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="2_54ctn"]
+[ext_resource type="PackedScene" uid="uid://byocqcv1ger7" path="res://assets/models/WaiterCan.glb" id="3_ab2no"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_xxcha"]
+[sub_resource type="Animation" id="Animation_ab2no"]
+resource_name = "HandHold"
+loop_mode = 2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8oust"]
+_data = {
+&"HandHold": SubResource("Animation_ab2no")
+}
 
 [node name="NPC" type="CharacterBody3D" unique_id=1006315584]
 script = ExtResource("1_54ctn")
@@ -11,13 +19,46 @@ script = ExtResource("1_54ctn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=527760165]
 
 [node name="HandPoint" type="Marker3D" parent="." unique_id=1622513715]
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Tentacle" parent="HandPoint" unique_id=2060886315 instance=ExtResource("2_54ctn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6921425, 0, 0)
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, -0.028, 7, -5)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=515722422]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 7.82895, 0)
-mesh = SubResource("CapsuleMesh_xxcha")
+[node name="WaiterCan" parent="." unique_id=1600502519 instance=ExtResource("3_ab2no")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.5, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2037157258]
-root_node = NodePath("")
+[node name="Cube" parent="WaiterCan" index="0" unique_id=1390199609]
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Cylinder" parent="WaiterCan" index="1" unique_id=1372343939]
+transform = Transform3D(-0.86815196, 0.11427564, -0.48296303, -0.016857728, 0.9657787, 0.25881916, 0.49601206, 0.23283601, -0.8365164, -0.7, 3, 0.39999998)
+
+[node name="Cylinder_001" parent="WaiterCan" index="2" unique_id=1715368355]
+transform = Transform3D(0.8730415, -0.39439955, -0.2867883, -0.01001029, 0.5734892, -0.81915194, 0.4875432, 0.7180245, 0.49673176, -0.7, 3, -0.40000004)
+
+[node name="Cube_001" parent="WaiterCan" index="3" unique_id=185980692]
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, -0.76785326, 2.3, 0)
+
+[node name="Cube_002" parent="WaiterCan" index="4" unique_id=1854742834]
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, -0.76785326, 2.3, 0)
+
+[node name="Sphere_001" parent="WaiterCan" index="5" unique_id=1424762294]
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0, 1.5, 1.1)
+
+[node name="Cube_003" parent="WaiterCan" index="7" unique_id=1061562665]
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.015817251, 0.9061698, 0.4226182, 0.0073757046, -0.42255384, 0.9063078, 0, 4, 0.3)
+
+[node name="Plane" parent="WaiterCan" index="8" unique_id=1166718637]
+transform = Transform3D(0.59990865, 0.010471444, 0, -0.010471444, 0.59990865, 0, 0, 0, 0.6, 0, 1, 0)
+
+[node name="Plane_001" parent="WaiterCan" index="9" unique_id=1801073234]
+transform = Transform3D(0.5709105, 0.009965278, -0.18428783, -0.010471445, 0.59990865, 0, 0.18425976, 0.0032162657, 0.5709975, 0, 0.7, 0)
+
+[node name="Plane_002" parent="WaiterCan" index="10" unique_id=1893384420]
+transform = Transform3D(0.5009658, 0.008744391, 0.33008602, -0.010471443, 0.59990865, 0, -0.33003575, -0.0057607964, 0.50104207, 0, 0.39999998, 0)
+
+[node name="AnimationPlayer" parent="WaiterCan" index="11" unique_id=1388265899]
+libraries/Local = SubResource("AnimationLibrary_8oust")
+autoplay = &"Local/HandHold"
+
+[editable path="WaiterCan"]

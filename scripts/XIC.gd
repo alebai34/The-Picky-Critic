@@ -25,7 +25,7 @@ var _original_global_transform: Transform3D
 
 @onready var _anim: AnimationPlayer = $Compendium/AnimationPlayer
 
-# READY
+# READY.
 
 func _ready() -> void:
 	_original_parent = get_parent()
