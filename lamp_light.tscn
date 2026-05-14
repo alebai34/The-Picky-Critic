@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpodnkuoelgyp"]
+
+[ext_resource type="PackedScene" uid="uid://bhxuh7tl1btcg" path="res://assets/models/Lamp.glb" id="1_c3g1r"]
+[ext_resource type="Script" uid="uid://dxj56bd5e27q7" path="res://omni_light.gd" id="2_h21le"]
+
+[node name="LampLight" type="Node3D" unique_id=1333559538]
+
+[node name="Lamp" parent="." unique_id=1197555677 instance=ExtResource("1_c3g1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5273104, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=536408391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011366606, -0.18986511, -1.0995047)
+light_color = Color(1, 0.8352941, 0.5019608, 1)
+light_energy = 3.0
+shadow_enabled = true
+shadow_blur = 0.5
+omni_range = 8.0
+omni_attenuation = 2.0
+script = ExtResource("2_h21le")
