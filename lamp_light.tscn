@@ -8,12 +8,12 @@
 [node name="Lamp" parent="." unique_id=1197555677 instance=ExtResource("1_c3g1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5273104, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=536408391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011366606, -0.18986511, -1.0995047)
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1841106648]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -1.1)
 light_color = Color(1, 0.8352941, 0.5019608, 1)
 light_energy = 3.0
+light_bake_mode = 1
 shadow_enabled = true
-shadow_blur = 0.5
-omni_range = 8.0
-omni_attenuation = 2.0
+shadow_blur = 0.3
+spot_range = 4096.0
 script = ExtResource("2_h21le")

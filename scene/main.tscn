@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c20k0na80bhh3" path="res://scene/XIC.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://gfdjqvgj7l4o" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
+[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://lamp_light.tscn" id="8_of57s"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -271,6 +272,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_usfk7")
 
+[sub_resource type="Environment" id="Environment_of57s"]
+background_mode = 2
+
 [node name="Main" type="Node3D" unique_id=2118389225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.56533, 0, 0)
 script = ExtResource("1_4j5ol")
@@ -337,3 +341,14 @@ mesh = SubResource("ArrayMesh_dbra0")
 [node name="Cube_017" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1000513805]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 8.5, 40)
 mesh = SubResource("ArrayMesh_gbwuu")
+
+[node name="LampLight" parent="." unique_id=1333559538 instance=ExtResource("8_of57s")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.631692, 19.023876, -18.388426)
+
+[node name="LampLight2" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.68109, 12.593084, -1.5712433)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1667252863]
+environment = SubResource("Environment_of57s")
+
+[editable path="XIC"]
