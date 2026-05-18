@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c20k0na80bhh3" path="res://scene/XIC.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://gfdjqvgj7l4o" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
-[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://lamp_light.tscn" id="8_of57s"]
+[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -272,8 +272,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_usfk7")
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of57s"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 0.14489044
+sky_energy_multiplier = 0.0
+
+[sub_resource type="Sky" id="Sky_b5f6u"]
+sky_material = SubResource("ProceduralSkyMaterial_of57s")
+
 [sub_resource type="Environment" id="Environment_of57s"]
 background_mode = 2
+background_energy_multiplier = 0.6
+sky = SubResource("Sky_b5f6u")
+ambient_light_energy = 3.39
+ssil_enabled = true
 
 [node name="Main" type="Node3D" unique_id=2118389225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.56533, 0, 0)
@@ -312,6 +325,7 @@ metadata/_edit_use_anchors_ = true
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -1.49, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1425713865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19130039, -0.098228455, -0.04673767)
 mesh = SubResource("ArrayMesh_cfoiu")
 
 [node name="Cube_010" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=807695681]
@@ -343,10 +357,19 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 8.5, 40)
 mesh = SubResource("ArrayMesh_gbwuu")
 
 [node name="LampLight" parent="." unique_id=1333559538 instance=ExtResource("8_of57s")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.631692, 19.023876, -18.388426)
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.632, 19, -18.388)
 
-[node name="LampLight2" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.68109, 12.593084, -1.5712433)
+[node name="LampLight2" parent="." unique_id=697729409 instance=ExtResource("8_of57s")]
+transform = Transform3D(-1.7484555e-07, 0, -4, 0, 4, 0, 4, 0, -1.7484555e-07, -6.2808657, 19.534191, -44.906975)
+
+[node name="LampLight4" parent="." unique_id=1616072588 instance=ExtResource("8_of57s")]
+transform = Transform3D(-0.024434047, 0, 1.9998507, 0, 2, 0, -1.9998507, 0, -0.024434047, 56.9924, 19, -18.388)
+
+[node name="LampLight5" parent="." unique_id=51900109 instance=ExtResource("8_of57s")]
+transform = Transform3D(-0.048868094, 0, 3.9997015, 0, 4, 0, -3.9997015, 0, -0.048868094, 57.343536, 19.534191, -44.906975)
+
+[node name="LampLight3" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.309332, 18.730375, -19.25788)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1667252863]
 environment = SubResource("Environment_of57s")

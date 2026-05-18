@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpodnkuoelgyp"]
 
 [ext_resource type="PackedScene" uid="uid://bhxuh7tl1btcg" path="res://assets/models/Lamp.glb" id="1_c3g1r"]
-[ext_resource type="Script" uid="uid://dxj56bd5e27q7" path="res://omni_light.gd" id="2_h21le"]
+[ext_resource type="Script" uid="uid://dxj56bd5e27q7" path="res://scripts/omni_light.gd" id="2_h21le"]
 
 [node name="LampLight" type="Node3D" unique_id=1333559538]
 
