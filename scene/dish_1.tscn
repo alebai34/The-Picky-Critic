@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://pf8akc166urx"]
+
+[ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="1_dkoxs"]
+
+[node name="Dish1" type="Node3D" unique_id=1463639202]
+
+[node name="Tentacle" parent="." unique_id=12365077 instance=ExtResource("1_dkoxs")]
