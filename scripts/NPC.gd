@@ -7,10 +7,17 @@ enum State { WALKING_TO_PLAYER, DOING_ANIMATION, LEAVING, DONE }
 
 @onready var food: Node3D = $HandPoint/Tentacle
 @onready var hand_point: Marker3D = $HandPoint
+#@export var dishes : = Array[FoodDish]
 
 var current_state: State = State.WALKING_TO_PLAYER
 var table_position: Vector3  # Where the food gets placed
 
+func _ready():
+	FoodHandler.s_food_eaten.connect(ready_for_delivery)
+	
+func ready_for_delivery():
+	current_state = State.WALKING_TO_PLAYER
+	#generate new food
 
 func _process(delta: float) -> void:
 	match current_state:
@@ -36,18 +43,21 @@ func _walk_to_exit(delta: float) -> void:
 func _place_food() -> void:
 	current_state = State.DOING_ANIMATION
 
-	# Save the food's current world position
-	table_position = food.global_position
-
-	# Detach food from NPC and place it in the world
-	var food_parent = food.get_parent()
-	food_parent.remove_child(food)
-	get_tree().current_scene.add_child(food)
-
-	# Keep it in the same world position
-	food.global_position = table_position
-
-	# Wait, then leave
+	FoodHandler.food_arrived()
+	#delete the food mesh
+	
+	## Save the food's current world position
+	#table_position = food.global_position
+#
+	## Detach food from NPC and place it in the world
+	#var food_parent = food.get_parent()
+	#food_parent.remove_child(food)
+	#get_tree().current_scene.add_child(food)
+#
+	## Keep it in the same world position
+	#food.global_position = table_position
+#
+	## Wait, then leave
 	await get_tree().create_timer(1.0).timeout
 	current_state = State.LEAVING
 

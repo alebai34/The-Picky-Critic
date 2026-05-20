@@ -15,6 +15,10 @@ run/main_scene="uid://5r0gs8odikua"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+FoodHandler="*uid://c5scpu2ixqaab"
+
 [filesystem]
 
 import/blender/enabled=false

@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://5r0gs8odikua"]
 
-[ext_resource type="Script" path="res://scene/main.gd" id="1_4j5ol"]
+[ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scene/main.gd" id="1_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://scene/dish_1.tscn" id="2_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://c2yqa4fol6lhp" path="res://scene/accept_button.tscn" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" path="res://scene/XIC.tscn" id="5_0ha60"]
@@ -272,18 +273,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_usfk7")
 
-[sub_resource type="Environment" id="Environment_of57s"]
-background_mode = 2
-
 [node name="Main" type="Node3D" unique_id=2118389225]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.56533, 0, 0)
 script = ExtResource("1_4j5ol")
+food = ExtResource("2_b5f6u")
 
 [node name="Table" parent="." unique_id=281560904 instance=ExtResource("1_itxqv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 3.621685, -23)
 
+[node name="FoodLocation" type="Marker3D" parent="Table" unique_id=2138726249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4078369, 2.6597605, 0.88003254)
+
 [node name="AcceptButton" parent="." unique_id=601712538 instance=ExtResource("2_wp4xf")]
-transform = Transform3D(16.565315, 0, -11.206709, 0, 20, 0, 11.206709, 0, 16.565315, 9.338982, 5.7979374, -25.397243)
+transform = Transform3D(16.565315, 0, -11.206709, 0, 20, 0, 11.206709, 0, 16.565315, 8.520147, 5.7979374, -25.397243)
 
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
 transform = Transform3D(-0.999821, 0, 0.018918252, 0, 1, 0, -0.018918252, 0, -0.999821, 10.790114, 9.692496, -30.214415)
@@ -304,6 +305,15 @@ transform = Transform3D(-4.284084e-08, 0, -1, 0, 1, 0, 1, 0, -4.284084e-08, -0.3
 
 [node name="XIC" parent="." unique_id=1897864472 instance=ExtResource("5_0ha60")]
 transform = Transform3D(0.86066204, 0, 0.5091766, 0, 1, 0, -0.5091766, 0, 0.86066204, 12.517525, 5.672301, -24.94181)
+
+[node name="Cube" parent="XIC/Compendium" parent_id_path=PackedInt32Array(1897864472, 1406888072) index="0" unique_id=1460182096]
+transform = Transform3D(-1.6292068e-07, 1, 0, -1, -1.6292068e-07, 0, 0, 0, 1, 2, 0.07577354, 3)
+
+[node name="Cube_001" parent="XIC/Compendium" parent_id_path=PackedInt32Array(1897864472, 1406888072) index="1" unique_id=1056246830]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2, 0.07577354, 3)
+
+[node name="CollisionShape3D" parent="XIC/StaticBody3D" parent_id_path=PackedInt32Array(1897864472, 620253685) index="0" unique_id=1931217506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.663331, 1.4200006, 2.2161026)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -349,6 +359,5 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1667252863]
-environment = SubResource("Environment_of57s")
 
 [editable path="XIC"]
