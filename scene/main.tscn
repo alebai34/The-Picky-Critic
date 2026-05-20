@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://gfdjqvgj7l4o" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
 [ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
+[ext_resource type="PackedScene" uid="uid://2yhrag8y7sga" path="res://assets/models/paintingOmni.glb" id="9_b5f6u"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -373,5 +374,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.309332, 18.730375, -19.257
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1667252863]
 environment = SubResource("Environment_of57s")
+
+[node name="paintingOmni" parent="." unique_id=1085919532 instance=ExtResource("9_b5f6u")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.4975843, 13.889515, -18.171038)
 
 [editable path="XIC"]
