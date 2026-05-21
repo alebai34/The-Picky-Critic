@@ -11,7 +11,6 @@ enum State { WALKING_TO_PLAYER, DOING_ANIMATION, LEAVING, DONE }
 var current_state: State = State.WALKING_TO_PLAYER
 var table_position: Vector3  # Where the food gets placed
 
-
 func _process(delta: float) -> void:
 	match current_state:
 		State.WALKING_TO_PLAYER:

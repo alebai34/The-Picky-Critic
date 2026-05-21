@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6ttk3yiwum4p" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Script" path="res://scripts/dot_crosshair.gd" id="2_fvtld"]
+[ext_resource type="Script" uid="uid://dl8lo4vo0vjtu" path="res://scene/xic_overlay.gd" id="3_y30ri"]
 
 [node name="Player" type="Node3D" unique_id=1608918345]
 script = ExtResource("1_hjaqi")
@@ -28,3 +29,50 @@ mouse_filter = 2
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 script = ExtResource("2_fvtld")
+
+[node name="XICOverlay" type="CanvasLayer" parent="." unique_id=620606566]
+script = ExtResource("3_y30ri")
+
+[node name="XICPanel" type="PanelContainer" parent="XICOverlay" unique_id=655898665]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="XICOverlay/XICPanel" unique_id=1129782931]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="XICOverlay/XICPanel/MarginContainer" unique_id=2111411286]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderRow" type="HBoxContainer" parent="XICOverlay/XICPanel/MarginContainer/VBoxContainer" unique_id=2132133817]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="XICOverlay/XICPanel/MarginContainer/VBoxContainer/HeaderRow" unique_id=33999895]
+layout_mode = 2
+
+[node name="PageLabel" type="Label" parent="XICOverlay/XICPanel/MarginContainer/VBoxContainer/HeaderRow" unique_id=1649639783]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="XICOverlay/XICPanel/MarginContainer/VBoxContainer" unique_id=893502454]
+layout_mode = 2
+placeholder_text = "Search Compound..."
+
+[node name="DividerLine" type="HSeparator" parent="XICOverlay/XICPanel/MarginContainer/VBoxContainer" unique_id=1774852013]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="XICOverlay/XICPanel/MarginContainer/VBoxContainer" unique_id=1192123536]
+layout_mode = 2
