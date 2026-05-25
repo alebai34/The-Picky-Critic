@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://7btbwsjpn335"]
 
-[ext_resource type="Script" uid="uid://cwpnv4x4nop30" path="res://heart_container.gd" id="1_nrrdr"]
+[ext_resource type="Script" path="res://heart_container.gd" id="1_nrrdr"]
 [ext_resource type="Texture2D" uid="uid://b4to16s6cwvdl" path="res://assets/images/heart (1).png" id="2_osnub"]
 
 [node name="HeartContainer" type="Control" unique_id=376623184]
 layout_mode = 3
-anchors_preset = 0
+anchor_right = 0.13700001
+anchor_bottom = 0.13700001
+offset_right = -157.824
+offset_bottom = -88.77601
 script = ExtResource("1_nrrdr")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=936785067]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 64.0
+offset_bottom = 64.0
 texture = ExtResource("2_osnub")

@@ -14,4 +14,3 @@ func place_food():
 	#new_food.position = food_location.global_position
 	food_location.add_child(new_food)
 	
-	

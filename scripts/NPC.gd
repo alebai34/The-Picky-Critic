@@ -44,7 +44,8 @@ func _place_food() -> void:
 	current_state = State.DOING_ANIMATION
 
 	FoodHandler.food_arrived()
-	#delete the food mesh
+	#delete the food mesh I THINK THIS IS THE NEXT STEP OR SMT, IDRK
+	
 	
 	## Save the food's current world position
 	#table_position = food.global_position
