@@ -19,8 +19,13 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	ray_cast_3d.enabled = true
 	
+	FoodHandler.s_food_binned.connect(_on_food_binned)
+	
 func _process(delta):
 	return
+	
+func _on_food_binned():
+	print("player binned the food")
 	
 func _input(event):
 	# ESC toggles locked mouse.

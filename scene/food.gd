@@ -7,7 +7,8 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func bin():
-	FoodHandler.food_binned
+	FoodHandler.food_binned()
+	queue_free()
 
 func interact():
 	FoodHandler.food_eaten()
@@ -15,7 +16,9 @@ func interact():
 		print("live")
 	else:
 		print("die")
-		
+	queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if decline_button.bin_food:
+		queue_free()
 	pass
