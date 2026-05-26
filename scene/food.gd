@@ -6,12 +6,16 @@ class_name FoodDish
 func _ready() -> void:
 	pass # Replace with function body.
 
+func bin():
+	FoodHandler.food_binned
+
 func interact():
 	FoodHandler.food_eaten()
 	if safe_to_eat:
-		print("yum")
+		print("live")
 	else:
-		print("you dead")
+		print("die")
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
