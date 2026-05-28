@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var xic_overlay: CanvasLayer = $XICOverlay
 @onready var cam = $Camera3D
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 
@@ -36,7 +37,7 @@ func _input(event):
 		var collider = ray_cast_3d.get_collider()
 		if collider.has_method("interact"):
 			collider.interact()
-	
+			get_viewport().set_input_as_handled()
 		return
 
 
@@ -70,14 +71,12 @@ func _unhandled_input(event: InputEvent) -> void:
 func _try_interact() -> void:
 	if not ray_cast_3d.is_colliding():
 		return
- 
 	var target = ray_cast_3d.get_collider()
- 
 	var xic: Node = _find_xic_in_parents(target)
- 
 	if xic != null:
 		xic.pickup(cam)
 		_held_xic = xic
+		xic_overlay.show_for_xic(xic.page_count)
 		if not xic.page_changed.is_connected(_on_xic_page_changed):
 			xic.page_changed.connect(_on_xic_page_changed)
 		if not xic.book_put_down.is_connected(_on_xic_closed):
@@ -92,9 +91,9 @@ func _find_xic_in_parents(node: Node) -> Node:
 	return null
  
 func _on_xic_page_changed(page_index: int) -> void:
-	print("XIC turned to page: ", page_index)
+	xic_overlay.on_page_changed(page_index)
 
  
 func _on_xic_closed() -> void:
 	_held_xic = null
-	print("XIC closed.")
+	xic_overlay.hide_xic()
