@@ -1,5 +1,7 @@
 extends Area3D
-
+class_name BinButton
+signal bin_food
 
 func interact():
-	print("Button was clicked!")
+	print("Bin button was clicked!")
+	FoodHandler.food_binned()

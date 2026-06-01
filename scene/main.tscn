@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scene/main.gd" id="1_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
-[ext_resource type="PackedScene" path="res://scene/accept_button.tscn" id="2_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://scene/dish_1.tscn" id="2_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
-[ext_resource type="PackedScene" uid="uid://c20k0na80bhh3" path="res://scene/XIC.tscn" id="5_0ha60"]
-[ext_resource type="PackedScene" uid="uid://gfdjqvgj7l4o" path="res://scene/npc.tscn" id="5_4j5ol"]
-[ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
-[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
-[ext_resource type="PackedScene" uid="uid://2yhrag8y7sga" path="res://assets/models/paintingOmni.glb" id="9_b5f6u"]
+[ext_resource type="PackedScene" path="res://scene/XIC.tscn" id="5_0ha60"]
+[ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
+[ext_resource type="PackedScene" path="res://scene/health_ui.tscn" id="7_p1hux"]
+[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://lamp_light.tscn" id="8_of57s"]
+[ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -273,31 +273,137 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_usfk7")
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of57s"]
-sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-sky_curve = 0.14489044
-sky_energy_multiplier = 0.0
+[sub_resource type="Animation" id="Animation_b5f6u"]
+resource_name = "DELIVER"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03, 1.17, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-16.559774, 0.05471419, 21.04017), Vector3(20.153072, -0.1469638, 20.895212), Vector3(20.15307, -0.1469638, 20.895212), Vector3(19.997095, -0.047885958, -18.745977), Vector3(19.997095, -0.04788596, -18.745975)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.03, 1.17, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569), Vector3(-0.008069368, -3.1108568, 0.0027894573), Vector3(-0.010847877, -1.5400022, -0.005280953), Vector3(-0.010847876, -1.5400022, -0.005280952), Vector3(-0.006815298, -0.6557167, -0.0085076)]
+}
 
-[sub_resource type="Sky" id="Sky_b5f6u"]
-sky_material = SubResource("ProceduralSkyMaterial_of57s")
+[sub_resource type="Animation" id="Animation_tqoya"]
+resource_name = "LEAVE"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(19.997095, -0.047885966, -18.745977), Vector3(19.997095, -0.04788597, -18.745975), Vector3(20.135202, -0.135616, 16.35494), Vector3(20.135202, -0.135616, 16.35494), Vector3(-12.079843, 0.041353814, 16.482138)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.006815298, -0.65571666, -0.0085076), Vector3(0.000357978, 1.4386381, -0.00090405205), Vector3(0.000357978, 1.438638, -0.0009040518), Vector3(-0.0022552288, 0.1296652, -0.0077715856), Vector3(-0.0022552286, 0.12966517, -0.007771587)]
+}
 
-[sub_resource type="Environment" id="Environment_of57s"]
-background_mode = 2
-background_energy_multiplier = 0.6
-sky = SubResource("Sky_b5f6u")
-ambient_light_energy = 3.39
-ssil_enabled = true
+[sub_resource type="Animation" id="Animation_k65ib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-16.559774, 0.05471419, 21.04017)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569)]
+}
+
+[sub_resource type="Animation" id="Animation_wscrc"]
+resource_name = "START"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-16.559774, 0.05471419, 21.04017)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mswub"]
+_data = {
+&"DELIVER": SubResource("Animation_b5f6u"),
+&"LEAVE": SubResource("Animation_tqoya"),
+&"RESET": SubResource("Animation_k65ib"),
+&"START": SubResource("Animation_wscrc")
+}
 
 [node name="Main" type="Node3D" unique_id=2118389225]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.56533, 0, 0)
+transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.99998176, 0.0024776678, 0.0039345887, -0.0024993457, 0.99998915, 0, 0, 0)
 script = ExtResource("1_4j5ol")
+food = ExtResource("2_b5f6u")
 
 [node name="Table" parent="." unique_id=281560904 instance=ExtResource("1_itxqv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 3.621685, -23)
 
-[node name="AcceptButton" parent="." unique_id=601712538 instance=ExtResource("2_wp4xf")]
-transform = Transform3D(16.565315, 0, -11.206709, 0, 20, 0, 11.206709, 0, 16.565315, 9.338982, 5.7979374, -25.397243)
+[node name="FoodLocation" type="Marker3D" parent="Table" unique_id=2138726249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4078369, 2.6597605, 0.88003254)
+
+[node name="DeclineButton" parent="Table" unique_id=1139406235 instance=ExtResource("9_b5f6u")]
+transform = Transform3D(0.05922345, -0.037165124, -14.999836, -0.08239899, 14.999727, -0.03749018, 14.999657, 0.08254611, 0.05901821, 0.62592125, 2.0944943, -3.9185376)
 
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
 transform = Transform3D(-0.999821, 0, 0.018918252, 0, 1, 0, -0.018918252, 0, -0.999821, 10.790114, 9.692496, -30.214415)
@@ -309,15 +415,17 @@ curve = SubResource("Curve3D_p1hux")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
 transform = Transform3D(-0.9994821, 3.3318804e-07, -0.03075898, 0, 0.9999954, 1.0831302e-05, 0.03075898, 1.08266095e-05, -0.9994821, -28.286642, 0.23918438, -16.15002)
 
-[node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-4.284084e-08, 0, -1, 0, 1, 0, 1, 0, -4.284084e-08, -0.3971157, -0.03356573, 0.39666367)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=990750614]
-
 [node name="XIC" parent="." unique_id=1897864472 instance=ExtResource("5_0ha60")]
 transform = Transform3D(0.86066204, 0, 0.5091766, 0, 1, 0, -0.5091766, 0, 0.86066204, 12.517525, 5.672301, -24.94181)
+
+[node name="Cube" parent="XIC/Compendium" parent_id_path=PackedInt32Array(1897864472, 1406888072) index="0" unique_id=1460182096]
+transform = Transform3D(-1.6292068e-07, 1, 0, -1, -1.6292068e-07, 0, 0, 0, 1, 2, 0.07577354, 3)
+
+[node name="Cube_001" parent="XIC/Compendium" parent_id_path=PackedInt32Array(1897864472, 1406888072) index="1" unique_id=1056246830]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2, 0.07577354, 3)
+
+[node name="CollisionShape3D" parent="XIC/StaticBody3D" parent_id_path=PackedInt32Array(1897864472, 620253685) index="0" unique_id=1931217506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.663331, 1.4200006, 2.2161026)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -326,7 +434,6 @@ metadata/_edit_use_anchors_ = true
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -1.49, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1425713865]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19130039, -0.098228455, -0.04673767)
 mesh = SubResource("ArrayMesh_cfoiu")
 
 [node name="Cube_010" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=807695681]
@@ -339,6 +446,7 @@ mesh = SubResource("ArrayMesh_ixjxw")
 
 [node name="Cube_013" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=976740089]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
+visible = false
 mesh = SubResource("ArrayMesh_ll6ox")
 
 [node name="Cube_014" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1800074448]
@@ -358,24 +466,19 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 8.5, 40)
 mesh = SubResource("ArrayMesh_gbwuu")
 
 [node name="LampLight" parent="." unique_id=1333559538 instance=ExtResource("8_of57s")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.632, 19, -18.388)
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.631692, 19.023876, -18.388426)
 
-[node name="LampLight2" parent="." unique_id=697729409 instance=ExtResource("8_of57s")]
-transform = Transform3D(-1.7484555e-07, 0, -4, 0, 4, 0, 4, 0, -1.7484555e-07, -6.2808657, 19.534191, -44.906975)
+[node name="LampLight2" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
-[node name="LampLight4" parent="." unique_id=1616072588 instance=ExtResource("8_of57s")]
-transform = Transform3D(-0.024434047, 0, 1.9998507, 0, 2, 0, -1.9998507, 0, -0.024434047, 56.9924, 19, -18.388)
+[node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
+transform = Transform3D(-0.9994776, 0.003036099, -0.03072865, 0.0027892354, 0.9999593, 0.008068915, 0.030752024, 0.007979682, -0.9994498, -16.559774, 0.05471419, 21.04017)
 
-[node name="LampLight5" parent="." unique_id=51900109 instance=ExtResource("8_of57s")]
-transform = Transform3D(-0.048868094, 0, 3.9997015, 0, 4, 0, -3.9997015, 0, -0.048868094, 57.343536, 19.534191, -44.906975)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
-[node name="LampLight3" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.309332, 18.730375, -19.25788)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="NPC" unique_id=990750614]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1667252863]
-environment = SubResource("Environment_of57s")
-
-[node name="paintingOmni" parent="." unique_id=1085919532 instance=ExtResource("9_b5f6u")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.4975843, 13.889515, -18.171038)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NPC" unique_id=356913390]
+libraries/ = SubResource("AnimationLibrary_mswub")
 
 [editable path="XIC"]
