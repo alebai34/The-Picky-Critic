@@ -273,6 +273,124 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_usfk7")
 
+[sub_resource type="Animation" id="Animation_b5f6u"]
+resource_name = "DELIVER"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03, 1.17, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-16.559774, 0.05471419, 21.04017), Vector3(20.153072, -0.1469638, 20.895212), Vector3(20.15307, -0.1469638, 20.895212), Vector3(19.997095, -0.047885958, -18.745977), Vector3(19.997095, -0.04788596, -18.745975)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.03, 1.17, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569), Vector3(-0.008069368, -3.1108568, 0.0027894573), Vector3(-0.010847877, -1.5400022, -0.005280953), Vector3(-0.010847876, -1.5400022, -0.005280952), Vector3(-0.006815298, -0.6557167, -0.0085076)]
+}
+
+[sub_resource type="Animation" id="Animation_tqoya"]
+resource_name = "LEAVE"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(19.997095, -0.047885966, -18.745977), Vector3(19.997095, -0.04788597, -18.745975), Vector3(20.135202, -0.135616, 16.35494), Vector3(20.135202, -0.135616, 16.35494), Vector3(-12.079843, 0.041353814, 16.482138)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.006815298, -0.65571666, -0.0085076), Vector3(0.000357978, 1.4386381, -0.00090405205), Vector3(0.000357978, 1.438638, -0.0009040518), Vector3(-0.0022552288, 0.1296652, -0.0077715856), Vector3(-0.0022552286, 0.12966517, -0.007771587)]
+}
+
+[sub_resource type="Animation" id="Animation_k65ib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-16.559774, 0.05471419, 21.04017)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569)]
+}
+
+[sub_resource type="Animation" id="Animation_wscrc"]
+resource_name = "START"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-16.559774, 0.05471419, 21.04017)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mswub"]
+_data = {
+&"DELIVER": SubResource("Animation_b5f6u"),
+&"LEAVE": SubResource("Animation_tqoya"),
+&"RESET": SubResource("Animation_k65ib"),
+&"START": SubResource("Animation_wscrc")
+}
+
 [node name="Main" type="Node3D" unique_id=2118389225]
 transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.99998176, 0.0024776678, 0.0039345887, -0.0024993457, 0.99998915, 0, 0, 0)
 script = ExtResource("1_4j5ol")
@@ -296,13 +414,6 @@ curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
 transform = Transform3D(-0.9994821, 3.3318804e-07, -0.03075898, 0, 0.9999954, 1.0831302e-05, 0.03075898, 1.08266095e-05, -0.9994821, -28.286642, 0.23918438, -16.15002)
-
-[node name="NPC" parent="Path3D/PathFollow3D" unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-4.284084e-08, 0, -1, 0, 1, 0, 1, 0, -4.284084e-08, -0.3971157, -0.03356573, 0.39666367)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=901586292]
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Path3D/PathFollow3D/NPC" unique_id=990750614]
 
 [node name="XIC" parent="." unique_id=1897864472 instance=ExtResource("5_0ha60")]
 transform = Transform3D(0.86066204, 0, 0.5091766, 0, 1, 0, -0.5091766, 0, 0.86066204, 12.517525, 5.672301, -24.94181)
@@ -335,6 +446,7 @@ mesh = SubResource("ArrayMesh_ixjxw")
 
 [node name="Cube_013" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=976740089]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
+visible = false
 mesh = SubResource("ArrayMesh_ll6ox")
 
 [node name="Cube_014" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1800074448]
@@ -359,6 +471,14 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 [node name="LampLight2" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1667252863]
+[node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
+transform = Transform3D(-0.9994776, 0.003036099, -0.03072865, 0.0027892354, 0.9999593, 0.008068915, 0.030752024, 0.007979682, -0.9994498, -16.559774, 0.05471419, 21.04017)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="NPC" unique_id=990750614]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NPC" unique_id=356913390]
+libraries/ = SubResource("AnimationLibrary_mswub")
 
 [editable path="XIC"]

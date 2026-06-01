@@ -3,11 +3,17 @@ class_name FoodDish
 
 @export var safe_to_eat : bool = true
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	FoodHandler.s_food_eaten.connect(eat_food)
+	FoodHandler.s_food_binned.connect(bin)
 
+func eat_food():
+	print("EATEN")
+	queue_free()
+		
+	
 func bin():
-	FoodHandler.food_binned()
+	print("BINNED")
 	queue_free()
 
 func interact():
@@ -19,6 +25,7 @@ func interact():
 	queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if decline_button.bin_food:
-		queue_free()
+	return
+	#if decline_button.bin_food:
+	#	queue_free()
 	pass
