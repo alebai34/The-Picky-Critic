@@ -5,6 +5,9 @@ signal s_food_eaten
 signal s_food_binned
 
 var food_is_present := false
+var can_interact = false
+
+
 
 func food_arrived():
 	print("placing food")
@@ -12,9 +15,8 @@ func food_arrived():
 	s_food_arrived.emit()
 
 func food_eaten():
-	if food_is_present:
-		food_is_present = false
-		s_food_eaten.emit()
+	food_is_present = false
+	s_food_eaten.emit()
 
 func food_binned():
 	if food_is_present:

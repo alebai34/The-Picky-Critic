@@ -8,21 +8,24 @@ func _ready():
 	FoodHandler.s_food_binned.connect(bin)
 
 func eat_food():
-	print("EATEN")
+	#print("EATEN")
 	queue_free()
 		
 	
 func bin():
-	print("BINNED")
+	#print("BINNED")
 	queue_free()
 
 func interact():
-	FoodHandler.food_eaten()
-	if safe_to_eat:
-		print("live")
+	if FoodHandler.can_interact:
+		FoodHandler.food_eaten()
+		if safe_to_eat:
+			print("live")
+		else:
+			print("die")
+		queue_free()
 	else:
-		print("die")
-	queue_free()
+		print("not ready to eat")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	return
