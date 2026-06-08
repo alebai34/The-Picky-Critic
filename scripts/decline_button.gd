@@ -4,4 +4,7 @@ signal bin_food
 
 func interact():
 	print("Bin button was clicked!")
-	FoodHandler.food_binned()
+	if FoodHandler.can_interact == true:
+		FoodHandler.food_binned()
+	else:
+		print("Can't bin yet")
