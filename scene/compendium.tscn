@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bbx2r4er8y7yo"]
+
+[ext_resource type="Script" uid="uid://cvdoeya24dd1" path="res://scripts/XIC.gd" id="1_byf5x"]
+[ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="2_j8ev1"]
+[ext_resource type="PackedScene" uid="uid://dd25a04aqcdkw" path="res://scene/pages/green_page.tscn" id="3_20186"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_22loe"]
+size = Vector3(0.4173584, 2.6264648, 3.635727)
+
+[node name="Compendium" type="Node3D" unique_id=1445648420]
+script = ExtResource("1_byf5x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=836331364]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1062671950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006652832, 1.4201746, 0.0023880005)
+shape = SubResource("BoxShape3D_22loe")
+
+[node name="Pages" type="Node3D" parent="." unique_id=216592428]
+
+[node name="Page" parent="Pages" unique_id=1359005368 instance=ExtResource("2_j8ev1")]
+
+[node name="Page2" parent="Pages" unique_id=872504313 instance=ExtResource("3_20186")]
+
+[node name="Page3" parent="Pages" unique_id=1577880151 instance=ExtResource("2_j8ev1")]
+
+[node name="Page4" parent="Pages" unique_id=637402927 instance=ExtResource("3_20186")]
+
+[node name="Page5" parent="Pages" unique_id=1574177169 instance=ExtResource("2_j8ev1")]
+
+[node name="Page6" parent="Pages" unique_id=2095750981 instance=ExtResource("3_20186")]
+
+[node name="Page7" parent="Pages" unique_id=1618677494 instance=ExtResource("2_j8ev1")]
+
+[node name="Page8" parent="Pages" unique_id=1095691400 instance=ExtResource("3_20186")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=23059045]
+transform = Transform3D(-1, -3.5527137e-15, -8.742277e-08, -5.810614e-08, 0.7471488, 0.66465676, 6.531782e-08, 0.66465676, -0.7471488, 0, 1.7003907, -2.0738258)

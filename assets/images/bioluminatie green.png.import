@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtger1sdg3g87"
-path.s3tc="res://.godot/imported/TentacleXIC.png-5fa852ea822afe40eb91976c545891b0.s3tc.ctex"
+uid="uid://dc7gx6lfjqj6x"
+path.s3tc="res://.godot/imported/bioluminatie green.png-13712575ca26fdfb8f2d5db9cd8ee3e1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/TentacleXIC.png"
-dest_files=["res://.godot/imported/TentacleXIC.png-5fa852ea822afe40eb91976c545891b0.s3tc.ctex"]
+source_file="res://assets/images/bioluminatie green.png"
+dest_files=["res://.godot/imported/bioluminatie green.png-13712575ca26fdfb8f2d5db9cd8ee3e1.s3tc.ctex"]
 
 [params]
 
