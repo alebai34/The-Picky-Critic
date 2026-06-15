@@ -1,13 +1,15 @@
 [gd_scene format=4 uid="uid://5r0gs8odikua"]
 
-[ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scene/main.gd" id="1_4j5ol"]
+[ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scripts/main.gd" id="1_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://scene/dish_1.tscn" id="2_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
-[ext_resource type="PackedScene" path="res://scene/XIC.tscn" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
-[ext_resource type="PackedScene" path="res://scene/health_ui.tscn" id="7_p1hux"]
-[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://lamp_light.tscn" id="8_of57s"]
+[ext_resource type="Script" uid="uid://cvdoeya24dd1" path="res://scripts/XIC.gd" id="6_k65ib"]
+[ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
+[ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="7_wscrc"]
+[ext_resource type="PackedScene" uid="uid://dd25a04aqcdkw" path="res://scene/pages/green_page.tscn" id="8_mswub"]
+[ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
 [ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
@@ -16,6 +18,9 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_22loe"]
+size = Vector3(2.5967712, 0.40698242, 3.635727)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2v4m6"]
 
@@ -396,6 +401,9 @@ transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.
 script = ExtResource("1_4j5ol")
 food = ExtResource("2_b5f6u")
 
+[node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
+transform = Transform3D(-0.99982095, -7.2759576e-11, 0.018918253, -4.0017767e-11, 1, 0, -0.01891825, 0, -0.99982095, 10.790113, 9.692497, -30.214413)
+
 [node name="Table" parent="." unique_id=281560904 instance=ExtResource("1_itxqv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 3.621685, -23)
 
@@ -405,9 +413,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4078369, 2.6597605, 0.88003
 [node name="DeclineButton" parent="Table" unique_id=1139406235 instance=ExtResource("9_b5f6u")]
 transform = Transform3D(0.05922345, -0.037165124, -14.999836, -0.08239899, 14.999727, -0.03749018, 14.999657, 0.08254611, 0.05901821, 0.62592125, 2.0944943, -3.9185376)
 
-[node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
-transform = Transform3D(-0.999821, 0, 0.018918252, 0, 1, 0, -0.018918252, 0, -0.999821, 10.790114, 9.692496, -30.214415)
-
 [node name="Path3D" type="Path3D" parent="." unique_id=1196724721]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104588, 0, -22.78)
 curve = SubResource("Curve3D_p1hux")
@@ -415,17 +420,37 @@ curve = SubResource("Curve3D_p1hux")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
 transform = Transform3D(-0.9994821, 3.3318804e-07, -0.03075898, 0, 0.9999954, 1.0831302e-05, 0.03075898, 1.08266095e-05, -0.9994821, -28.286642, 0.23918438, -16.15002)
 
-[node name="XIC" parent="." unique_id=1897864472 instance=ExtResource("5_0ha60")]
-transform = Transform3D(0.86066204, 0, 0.5091766, 0, 1, 0, -0.5091766, 0, 0.86066204, 12.517525, 5.672301, -24.94181)
+[node name="Compendium" type="Node3D" parent="." unique_id=1445648420]
+transform = Transform3D(1, -7.2759576e-11, -5.5879354e-09, -3.45608e-11, 1, 0, 0, 0, 1, 16.242306, 5.697146, -23.497728)
+script = ExtResource("6_k65ib")
 
-[node name="Cube" parent="XIC/Compendium" parent_id_path=PackedInt32Array(1897864472, 1406888072) index="0" unique_id=1460182096]
-transform = Transform3D(-1.6292068e-07, 1, 0, -1, -1.6292068e-07, 0, 0, 0, 1, 2, 0.07577354, 3)
+[node name="StaticBody3D" type="StaticBody3D" parent="Compendium" unique_id=836331364]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
-[node name="Cube_001" parent="XIC/Compendium" parent_id_path=PackedInt32Array(1897864472, 1406888072) index="1" unique_id=1056246830]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2, 0.07577354, 3)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Compendium/StaticBody3D" unique_id=1062671950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0963593, 0.3104334, 0.0023880005)
+shape = SubResource("BoxShape3D_22loe")
 
-[node name="CollisionShape3D" parent="XIC/StaticBody3D" parent_id_path=PackedInt32Array(1897864472, 620253685) index="0" unique_id=1931217506]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.663331, 1.4200006, 2.2161026)
+[node name="Pages" type="Node3D" parent="Compendium" unique_id=216592428]
+
+[node name="Page" parent="Compendium/Pages" unique_id=1359005368 instance=ExtResource("7_wscrc")]
+
+[node name="Page2" parent="Compendium/Pages" unique_id=872504313 instance=ExtResource("8_mswub")]
+
+[node name="Page3" parent="Compendium/Pages" unique_id=1577880151 instance=ExtResource("7_wscrc")]
+
+[node name="Page4" parent="Compendium/Pages" unique_id=637402927 instance=ExtResource("8_mswub")]
+
+[node name="Page5" parent="Compendium/Pages" unique_id=1574177169 instance=ExtResource("7_wscrc")]
+
+[node name="Page6" parent="Compendium/Pages" unique_id=2095750981 instance=ExtResource("8_mswub")]
+
+[node name="Page7" parent="Compendium/Pages" unique_id=1618677494 instance=ExtResource("7_wscrc")]
+
+[node name="Page8" parent="Compendium/Pages" unique_id=1095691400 instance=ExtResource("8_mswub")]
+
+[node name="Camera3D" type="Camera3D" parent="Compendium" unique_id=1347479664]
+transform = Transform3D(0.99999845, 0.0017452016, 2.3374014e-10, -2.7912392e-09, -4.353933e-08, 1, 0.001745211, -0.99999845, -3.655441e-08, 0.7299156, 2.636921, -0.33659744)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -472,7 +497,7 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.03072865, 0.0027892354, 0.9999593, 0.008068915, 0.030752024, 0.007979682, -0.9994498, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728642, 0.0027892354, 0.9999593, 0.008068914, 0.030752024, 0.007979682, -0.99944955, -16.559774, 0.05471419, 21.04017)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
@@ -480,5 +505,3 @@ transform = Transform3D(-0.9994776, 0.003036099, -0.03072865, 0.0027892354, 0.99
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC" unique_id=356913390]
 libraries/ = SubResource("AnimationLibrary_mswub")
-
-[editable path="XIC"]

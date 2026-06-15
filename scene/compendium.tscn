@@ -5,17 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://dd25a04aqcdkw" path="res://scene/pages/green_page.tscn" id="3_20186"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_22loe"]
-size = Vector3(0.4173584, 2.6264648, 3.635727)
+size = Vector3(2.5967712, 0.40698242, 3.635727)
 
 [node name="Compendium" type="Node3D" unique_id=1445648420]
 script = ExtResource("1_byf5x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=836331364]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1062671950]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006652832, 1.4201746, 0.0023880005)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0963593, 0.3104334, 0.0023880005)
 shape = SubResource("BoxShape3D_22loe")
 
 [node name="Pages" type="Node3D" parent="." unique_id=216592428]

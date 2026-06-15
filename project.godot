@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 FoodHandler="*uid://c5scpu2ixqaab"
+CameraTransition="*uid://c6ncygmppxah"
 
 [filesystem]
 

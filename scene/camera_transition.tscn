@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c6ncygmppxah"]
+
+[node name="camera_transition" type="Node" unique_id=201885034]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1008946389]
