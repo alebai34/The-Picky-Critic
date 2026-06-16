@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://bdiwquak3hyso"]
 
-[ext_resource type="Texture2D" uid="uid://8imjf1cjqj0s" path="res://assets/images/bioluminatie blue.png" id="1_topw4"]
+[ext_resource type="Texture2D" uid="uid://24kn8iurbckr" path="res://assets/images/bioluminatie blue2.png" id="1_ehkw3"]
 
 [node name="Page" type="Node3D" unique_id=1359005368]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Front" type="Sprite3D" parent="." unique_id=289255592]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0.9143706, 0, 0)
-texture = ExtResource("1_topw4")
+texture = ExtResource("1_ehkw3")
 
 [node name="Back" type="Sprite3D" parent="." unique_id=169842178]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0.9270529, -0.006927252, 0)
 flip_h = true
-texture = ExtResource("1_topw4")
+texture = ExtResource("1_ehkw3")

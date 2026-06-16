@@ -36,4 +36,5 @@ shape = SubResource("BoxShape3D_22loe")
 [node name="Page8" parent="Pages" unique_id=1095691400 instance=ExtResource("3_20186")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=23059045]
-transform = Transform3D(-1, -3.5527137e-15, -8.742277e-08, -5.810614e-08, 0.7471488, 0.66465676, 6.531782e-08, 0.66465676, -0.7471488, 0, 1.7003907, -2.0738258)
+transform = Transform3D(-1, -3.5527137e-15, -8.742278e-08, -6.485638e-08, 0.6705432, 0.7418705, 5.8620742e-08, 0.7418705, -0.6705432, -0.28179502, 2.0268002, -2.0738258)
+current = true

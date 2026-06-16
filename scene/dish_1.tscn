@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pf8akc166urx"]
 
 [ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="1_dkoxs"]
-[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scene/food.gd" id="1_w3lsv"]
+[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_w3lsv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xmo7l"]
 size = Vector3(1.8851929, 1.1567993, 1.7226563)
