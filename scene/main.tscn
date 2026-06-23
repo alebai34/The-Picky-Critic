@@ -5,12 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://scene/dish_1.tscn" id="2_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
-[ext_resource type="Script" uid="uid://cvdoeya24dd1" path="res://scripts/XIC.gd" id="6_k65ib"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
 [ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="7_wscrc"]
 [ext_resource type="PackedScene" uid="uid://dd25a04aqcdkw" path="res://scene/pages/green_page.tscn" id="8_mswub"]
 [ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
 [ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://bbx2r4er8y7yo" path="res://scene/compendium.tscn" id="9_k65ib"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -18,9 +18,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_22loe"]
-size = Vector3(2.5967712, 0.40698242, 3.635727)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2v4m6"]
 
@@ -401,8 +398,21 @@ transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.
 script = ExtResource("1_4j5ol")
 food = ExtResource("2_b5f6u")
 
+[node name="ReadMarker" type="Marker3D" parent="." unique_id=1009630347]
+transform = Transform3D(-0.95773435, 0.28659073, 0.024714813, 0.027375568, 0.0052803867, 0.9996113, 0.2863488, 0.9580385, -0.012902784, 15.243442, 8.238899, -21.854935)
+
+[node name="ReadCamera" type="Camera3D" parent="ReadMarker" unique_id=763506260]
+
+[node name="Label3D" type="Label3D" parent="ReadMarker/ReadCamera" unique_id=1437427027]
+transform = Transform3D(1, 0, 1.3969839e-09, 0, 0.9999999, 3.7252903e-09, -9.313226e-10, 0, 1, 0.42820168, -1.4824505, -2.2803116)
+layers = 2
+text = "Left and Right Arrow to Move"
+
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
 transform = Transform3D(-0.99982095, -7.2759576e-11, 0.018918253, -4.0017767e-11, 1, 0, -0.01891825, 0, -0.99982095, 10.790113, 9.692497, -30.214413)
+
+[node name="Camera3D" parent="Player" index="0" unique_id=918874127]
+cull_mask = 1048573
 
 [node name="Table" parent="." unique_id=281560904 instance=ExtResource("1_itxqv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 3.621685, -23)
@@ -419,38 +429,6 @@ curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
 transform = Transform3D(-0.9994821, 3.3318804e-07, -0.03075898, 0, 0.9999954, 1.0831302e-05, 0.03075898, 1.08266095e-05, -0.9994821, -28.286642, 0.23918438, -16.15002)
-
-[node name="Compendium" type="Node3D" parent="." unique_id=1445648420]
-transform = Transform3D(1, -7.2759576e-11, -5.5879354e-09, -3.45608e-11, 1, 0, 0, 0, 1, 16.242306, 5.697146, -23.497728)
-script = ExtResource("6_k65ib")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Compendium" unique_id=836331364]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Compendium/StaticBody3D" unique_id=1062671950]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0963593, 0.3104334, 0.0023880005)
-shape = SubResource("BoxShape3D_22loe")
-
-[node name="Pages" type="Node3D" parent="Compendium" unique_id=216592428]
-
-[node name="Page" parent="Compendium/Pages" unique_id=1359005368 instance=ExtResource("7_wscrc")]
-
-[node name="Page2" parent="Compendium/Pages" unique_id=872504313 instance=ExtResource("8_mswub")]
-
-[node name="Page3" parent="Compendium/Pages" unique_id=1577880151 instance=ExtResource("7_wscrc")]
-
-[node name="Page4" parent="Compendium/Pages" unique_id=637402927 instance=ExtResource("8_mswub")]
-
-[node name="Page5" parent="Compendium/Pages" unique_id=1574177169 instance=ExtResource("7_wscrc")]
-
-[node name="Page6" parent="Compendium/Pages" unique_id=2095750981 instance=ExtResource("8_mswub")]
-
-[node name="Page7" parent="Compendium/Pages" unique_id=1618677494 instance=ExtResource("7_wscrc")]
-
-[node name="Page8" parent="Compendium/Pages" unique_id=1095691400 instance=ExtResource("8_mswub")]
-
-[node name="Camera3D" type="Camera3D" parent="Compendium" unique_id=1347479664]
-transform = Transform3D(0.99999845, 0.0017452016, 2.3374014e-10, -2.7912392e-09, -4.353933e-08, 1, 0.001745211, -0.99999845, -3.655441e-08, 0.7299156, 2.636921, -0.33659744)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -497,7 +475,7 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728642, 0.0027892354, 0.9999593, 0.008068914, 0.030752024, 0.007979682, -0.99944955, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728634, 0.0027892354, 0.9999593, 0.008068912, 0.030752024, 0.007979682, -0.9994493, -16.559774, 0.05471419, 21.04017)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
@@ -505,3 +483,35 @@ transform = Transform3D(-0.9994776, 0.003036099, -0.030728642, 0.0027892354, 0.9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC" unique_id=356913390]
 libraries/ = SubResource("AnimationLibrary_mswub")
+
+[node name="Compendium" parent="." unique_id=1893867575 node_paths=PackedStringArray("player_camera", "book_camera") instance=ExtResource("9_k65ib")]
+transform = Transform3D(0.95394415, 0.0055030724, 0.2999339, -0.0045065274, 0.9999818, -0.004014206, -0.29995054, 0.0024776757, 0.9539514, 14.934416, 5.817361, -21.793022)
+player_camera = NodePath("../Player/Camera3D")
+book_camera = NodePath("../ReadMarker/ReadCamera")
+
+[node name="Page3" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="2" unique_id=1359005368 instance=ExtResource("7_wscrc")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page4" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="3" unique_id=1354020572 instance=ExtResource("8_mswub")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page5" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="4" unique_id=250431501 instance=ExtResource("7_wscrc")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page6" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="5" unique_id=990714558 instance=ExtResource("8_mswub")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page7" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="6" unique_id=301522410 instance=ExtResource("7_wscrc")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page8" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="7" unique_id=238042560 instance=ExtResource("8_mswub")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page9" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="8" unique_id=459229025 instance=ExtResource("7_wscrc")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Page10" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="9" unique_id=1459088998 instance=ExtResource("8_mswub")]
+transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[editable path="Player"]
+[editable path="Compendium"]
