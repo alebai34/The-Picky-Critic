@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scripts/main.gd" id="1_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
-[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://scene/dish_1.tscn" id="2_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://assets/food_scenes/dish_1.tscn" id="2_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://b8f11wvixwy1t" path="res://assets/food_scenes/dish_2.tscn" id="2_wscrc"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="Script" uid="uid://cvdoeya24dd1" path="res://scripts/XIC.gd" id="6_k65ib"]
@@ -396,10 +397,11 @@ _data = {
 &"START": SubResource("Animation_wscrc")
 }
 
-[node name="Main" type="Node3D" unique_id=2118389225]
+[node name="Main" type="Node3D" unique_id=2118389225 node_paths=PackedStringArray("waiter")]
 transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.99998176, 0.0024776678, 0.0039345887, -0.0024993457, 0.99998915, 0, 0, 0)
 script = ExtResource("1_4j5ol")
-food = ExtResource("2_b5f6u")
+foods = Array[PackedScene]([ExtResource("2_wscrc"), ExtResource("2_b5f6u")])
+waiter = NodePath("NPC")
 
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
 transform = Transform3D(-0.99982095, -7.2759576e-11, 0.018918253, -4.0017767e-11, 1, 0, -0.01891825, 0, -0.99982095, 10.790113, 9.692497, -30.214413)
@@ -497,7 +499,7 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728642, 0.0027892354, 0.9999593, 0.008068914, 0.030752024, 0.007979682, -0.99944955, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728636, 0.0027892354, 0.9999593, 0.008068912, 0.030752024, 0.007979682, -0.9994494, -16.559774, 0.05471419, 21.04017)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 

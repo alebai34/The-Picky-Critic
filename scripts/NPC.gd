@@ -34,11 +34,16 @@ func _process(delta: float) -> void:
 
 func _walk_to_player(delta: float) -> void:
 	FoodHandler.can_interact = false
+	
 	current_state = State.BUSY
 	animator.play("DELIVER")
 	await animator.animation_finished
 	
 	_place_food()
+
+func spawn_new_food(food):
+	#create food in hand
+	pass
 
 func _walk_to_exit(delta: float) -> void:
 	current_state = State.BUSY

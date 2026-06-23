@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://pf8akc166urx"]
 
 [ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="1_dkoxs"]
-[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_w3lsv"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="1_w3lsv"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xmo7l"]
-size = Vector3(1.8851929, 1.1567993, 1.7226563)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_w3lsv"]
 
 [node name="Dish1" type="Area3D" unique_id=530604241]
 script = ExtResource("1_w3lsv")
@@ -13,5 +12,5 @@ safe_to_eat = false
 [node name="Tentacle" parent="." unique_id=12365077 instance=ExtResource("1_dkoxs")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1560863283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02798462, 0.5623474, -0.056640625)
-shape = SubResource("BoxShape3D_xmo7l")
+transform = Transform3D(1.87, 0, 0, 0, 0.5, 0, 0, 0, 1.85, 0.02798462, 0.5123474, -0.004711625)
+shape = SubResource("CylinderShape3D_w3lsv")
