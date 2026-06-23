@@ -61,44 +61,9 @@ func _input(event):
 			deg_to_rad(-80),
 			deg_to_rad(80)
 		)
-
-# XIC/Interactions. 
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		if _held_xic != null:
-			_held_xic.put_down()
-			_held_xic = null
-		else:
-			_try_interact()
- 
  
 func _try_interact() -> void:
 	if not ray_cast_3d.is_colliding():
 		return
 	var target = ray_cast_3d.get_collider()
-	var xic: Node = _find_xic_in_parents(target)
-	if xic != null:
-		xic.pickup(cam)
-		_held_xic = xic
-		xic_overlay.show_for_xic(xic.page_count)
-		if not xic.page_changed.is_connected(_on_xic_page_changed):
-			xic.page_changed.connect(_on_xic_page_changed)
-		if not xic.book_put_down.is_connected(_on_xic_closed):
-			xic.book_put_down.connect(_on_xic_closed)
- 
-func _find_xic_in_parents(node: Node) -> Node:
-	var current = node
-	while current != null:
-		if current.has_method("pickup"):
-			return current
-		current = current.get_parent()
-	return null
- 
-func _on_xic_page_changed(page_index: int) -> void:
-	xic_overlay.on_page_changed(page_index)
-
- 
-func _on_xic_closed() -> void:
-	_held_xic = null
-	xic_overlay.hide_xic()
+	

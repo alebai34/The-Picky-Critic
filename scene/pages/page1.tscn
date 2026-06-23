@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bgeve6cih3bo6"]
+
+[ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="1_fcgem"]
+[ext_resource type="Texture2D" uid="uid://1sx43vq4igk8" path="res://assets/images/EledoneCirrhosa.png" id="2_24xrm"]
+
+[node name="Page" unique_id=1359005368 instance=ExtResource("1_fcgem")]
+
+[node name="Back" parent="." index="1" unique_id=169842178]
+texture = ExtResource("2_24xrm")

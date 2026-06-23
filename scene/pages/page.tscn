@@ -6,10 +6,12 @@
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Front" type="Sprite3D" parent="." unique_id=289255592]
-transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0.9143706, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0.9143706, 0.0082704425, 0)
+offset = Vector2(0, 0.01)
 texture = ExtResource("1_ehkw3")
 
 [node name="Back" type="Sprite3D" parent="." unique_id=169842178]
-transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0.9270529, -0.006927252, 0)
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0.9270529, -0.019577503, 0)
+offset = Vector2(0, -0.01)
 flip_h = true
 texture = ExtResource("1_ehkw3")

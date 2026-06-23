@@ -35,6 +35,12 @@ func _process(delta):
 		refresh()
 		is_turning = false
 
+func interact():
+	print("Compendium was clicked!")
+	
+	#else:
+		#print("Can't interact.")
+
 func turn_page(page: Node, from_z: float, to_z: float):
 	page.rotation_degrees.z = from_z
 	var tween = create_tween()
