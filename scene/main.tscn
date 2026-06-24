@@ -400,7 +400,6 @@ _data = {
 [node name="Main" type="Node3D" unique_id=2118389225 node_paths=PackedStringArray("waiter")]
 transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.99998176, 0.0024776678, 0.0039345887, -0.0024993457, 0.99998915, 0, 0, 0)
 script = ExtResource("1_4j5ol")
-foods = Array[PackedScene]([ExtResource("2_wscrc"), ExtResource("2_b5f6u")])
 waiter = NodePath("NPC")
 
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
@@ -499,7 +498,8 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728636, 0.0027892354, 0.9999593, 0.008068912, 0.030752024, 0.007979682, -0.9994494, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728634, 0.0027892354, 0.9999593, 0.008068912, 0.030752024, 0.007979682, -0.9994493, -16.559774, 0.05471419, 21.04017)
+foods = Array[PackedScene]([ExtResource("2_wscrc"), ExtResource("2_b5f6u")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
@@ -507,3 +507,6 @@ transform = Transform3D(-0.9994776, 0.003036099, -0.030728636, 0.0027892354, 0.9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC" unique_id=356913390]
 libraries/ = SubResource("AnimationLibrary_mswub")
+
+[editable path="NPC"]
+[editable path="NPC/WaiterCan"]

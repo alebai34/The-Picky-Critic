@@ -9,10 +9,10 @@ var can_interact = false
 
 
 
-func food_arrived():
+func food_arrived(food):
 	print("placing food")
 	food_is_present = true
-	s_food_arrived.emit()
+	s_food_arrived.emit(food)
 
 func food_eaten():
 	food_is_present = false
