@@ -5,7 +5,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_w3lsv"]
 
-[node name="Dish1" type="Area3D" unique_id=530604241]
+[node name="Dish_1_tentacle_soup" type="Area3D" unique_id=530604241]
 script = ExtResource("1_w3lsv")
 safe_to_eat = false
 

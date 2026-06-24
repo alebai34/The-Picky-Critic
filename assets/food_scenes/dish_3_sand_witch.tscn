@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://co2uvbj7g41dm"]
+
+[ext_resource type="Script" path="res://scripts/food.gd" id="1_ar3qw"]
+[ext_resource type="PackedScene" uid="uid://dahdhg8v7gi5h" path="res://assets/models/sand_witch.glb" id="1_b6aus"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fuan0"]
+size = Vector3(0.5995636, 0.49210358, 0.6282196)
+
+[node name="Dish_3_Sand_Witch" type="Area3D" unique_id=1091099015]
+script = ExtResource("1_ar3qw")
+
+[node name="sand_witch" parent="." unique_id=915446785 instance=ExtResource("1_b6aus")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=519630809]
+transform = Transform3D(2.115, 0, 0, 0, 1.754, 0, 0, 0, 2.115, 0.0009888227, 0.59845746, -0.009391114)
+shape = SubResource("BoxShape3D_fuan0")
