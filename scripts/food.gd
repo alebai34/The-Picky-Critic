@@ -1,6 +1,7 @@
 extends Area3D
 class_name FoodDish
 
+
 @export var safe_to_eat : bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,10 +20,10 @@ func bin():
 func interact():
 	if FoodHandler.can_interact:
 		FoodHandler.food_eaten()
-		if safe_to_eat:
-			print("live")
+		if safe_to_eat == true:
+			print("safe")
 		else:
-			print("die")
+			FoodHandler.player_lose_health()
 		queue_free()
 	else:
 		print("not ready to eat")

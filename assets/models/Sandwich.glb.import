@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://knrt0s670bwh"
-path="res://.godot/imported/sand_witch.glb-16ec70251c20939eff628cb1332cfd5d.scn"
+uid="uid://xr61hqkqk1l"
+path="res://.godot/imported/Sandwich.glb-b87f6c4a8facb77ff695c659fc747f7b.scn"
 
 [deps]
 
-source_file="res://assets/models/sand_witch.glb"
-dest_files=["res://.godot/imported/sand_witch.glb-16ec70251c20939eff628cb1332cfd5d.scn"]
+source_file="res://assets/models/Sandwich.glb"
+dest_files=["res://.godot/imported/Sandwich.glb-b87f6c4a8facb77ff695c659fc747f7b.scn"]
 
 [params]
 

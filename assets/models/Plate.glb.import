@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://knrt0s670bwh"
-path="res://.godot/imported/sand_witch.glb-16ec70251c20939eff628cb1332cfd5d.scn"
+uid="uid://c7hu83vhtubff"
+path="res://.godot/imported/Plate.glb-323fd6697b2e4cb3875f352cbb2eb40c.scn"
 
 [deps]
 
-source_file="res://assets/models/sand_witch.glb"
-dest_files=["res://.godot/imported/sand_witch.glb-16ec70251c20939eff628cb1332cfd5d.scn"]
+source_file="res://assets/models/Plate.glb"
+dest_files=["res://.godot/imported/Plate.glb-323fd6697b2e4cb3875f352cbb2eb40c.scn"]
 
 [params]
 

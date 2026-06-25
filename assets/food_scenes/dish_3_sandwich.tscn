@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://240fvf8al7ya"]
+
+[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_sp2sj"]
+[ext_resource type="PackedScene" uid="uid://xr61hqkqk1l" path="res://assets/models/Sandwich.glb" id="2_m4h7i"]
+[ext_resource type="PackedScene" uid="uid://c7hu83vhtubff" path="res://assets/models/Plate.glb" id="3_h8fl2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4h7i"]
+size = Vector3(1.0009766, 1.0404663, 1)
+
+[node name="Dish_3_Sandwich" type="Area3D" unique_id=1091099015]
+script = ExtResource("1_sp2sj")
+
+[node name="Sandwich" parent="." unique_id=1277330613 instance=ExtResource("2_m4h7i")]
+transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, 0, 0.5, 0)
+
+[node name="Plate" parent="." unique_id=118090071 instance=ExtResource("3_h8fl2")]
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1258604798]
+transform = Transform3D(1.13, 0, 0, 0, 0.8, 0, 0, 0, 1.13, 0.04248535, 0.47650915, 0)
+shape = SubResource("BoxShape3D_m4h7i")
