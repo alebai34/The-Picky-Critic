@@ -3,7 +3,7 @@ extends Node3D
 @onready var xic_overlay: CanvasLayer = $XICOverlay
 @onready var cam = $Camera3D
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
-@onready var health: int = 6
+@onready var health: int = 1
 
 var _held_xic: Node = null   
 
@@ -17,7 +17,10 @@ func lose_health():
 	health -=1
 	print("you lose a health, your health is now ",health)
 	if health <= 0:
-		print("you die")
+		die()
+
+func die():
+	get_tree().reload_current_scene()
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
