@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scripts/main.gd" id="1_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
-[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://scene/dish_1.tscn" id="2_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://assets/food_scenes/dish_1.tscn" id="2_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://b8f11wvixwy1t" path="res://assets/food_scenes/dish_2.tscn" id="2_wscrc"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
@@ -11,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
 [ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://bbx2r4er8y7yo" path="res://scene/compendium.tscn" id="9_k65ib"]
+[ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
+[ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -396,7 +399,6 @@ _data = {
 [node name="Main" type="Node3D" unique_id=2118389225]
 transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.99998176, 0.0024776678, 0.0039345887, -0.0024993457, 0.99998915, 0, 0, 0)
 script = ExtResource("1_4j5ol")
-food = ExtResource("2_b5f6u")
 
 [node name="ReadMarker" type="Marker3D" parent="." unique_id=1009630347]
 transform = Transform3D(-0.95773435, 0.28659073, 0.024714813, 0.027375568, 0.0052803867, 0.9996113, 0.2863488, 0.9580385, -0.012902784, 15.243442, 8.238899, -21.854935)
@@ -475,7 +477,8 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728634, 0.0027892354, 0.9999593, 0.008068912, 0.030752024, 0.007979682, -0.9994493, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728633, 0.0027892354, 0.9999593, 0.008068911, 0.030752024, 0.007979682, -0.99944925, -16.559774, 0.05471419, 21.04017)
+foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 

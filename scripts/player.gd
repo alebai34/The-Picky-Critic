@@ -20,7 +20,9 @@ func lose_health():
 		die()
 
 func die():
-	get_tree().reload_current_scene()
+	print("you die")
+	return
+	#get_tree().reload_current_scene()
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
