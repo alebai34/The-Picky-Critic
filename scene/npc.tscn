@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d14y76ebs5o6i"]
 
 [ext_resource type="Script" uid="uid://bbax7pou2v05m" path="res://scripts/NPC.gd" id="1_54ctn"]
-[ext_resource type="PackedScene" uid="uid://vvggwml8n86a" path="res://assets/models/Tentacle.glb" id="2_54ctn"]
 [ext_resource type="PackedScene" uid="uid://byocqcv1ger7" path="res://assets/models/WaiterCan.glb" id="3_ab2no"]
 
 [sub_resource type="Animation" id="Animation_ab2no"]
@@ -19,10 +18,7 @@ script = ExtResource("1_54ctn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=527760165]
 
 [node name="HandPoint" type="Marker3D" parent="." unique_id=1622513715]
-transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="Tentacle" parent="HandPoint" unique_id=2060886315 instance=ExtResource("2_54ctn")]
-transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, -0.028, 7, -5)
+transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0.0016925036, 8.162319, -5.138191)
 
 [node name="WaiterCan" parent="." unique_id=1600502519 instance=ExtResource("3_ab2no")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.5, 0)

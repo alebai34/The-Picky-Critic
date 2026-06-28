@@ -3,6 +3,7 @@ extends Node3D
 @onready var xic_overlay: CanvasLayer = $XICOverlay
 @onready var cam = $Camera3D
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
+@onready var health: int = 1
 
 var _held_xic: Node = null   
 
@@ -11,15 +12,20 @@ var can_look := true
 
 signal health_changed(new_hp: int)
 
-var hp := 6 :
-	set(value):
-		hp = clamp(value, 0, 6)
-		health_changed.emit(hp)
+
+func lose_health():
+	health -=1
+	print("you lose a health, your health is now ",health)
+	if health <= 0:
+		die()
+
+func die():
+	get_tree().reload_current_scene()
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	ray_cast_3d.enabled = true
-	
+	FoodHandler.s_lose_health.connect(lose_health)
 	FoodHandler.s_food_binned.connect(_on_food_binned)
 	
 func _process(delta):

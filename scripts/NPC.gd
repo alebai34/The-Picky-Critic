@@ -5,6 +5,8 @@ enum State { WALKING_TO_PLAYER, DOING_ANIMATION, LEAVING, DONE, BUSY }
 @export var stop_point: float = 0.5
 @onready var food: Node3D = $HandPoint/Tentacle
 @onready var hand_point: Marker3D = $HandPoint
+var current_food : PackedScene
+@export var foods : Array[PackedScene]
 
 var current_state: State = State.WALKING_TO_PLAYER:
 	set(value):
@@ -34,11 +36,20 @@ func _process(delta: float) -> void:
 
 func _walk_to_player(delta: float) -> void:
 	FoodHandler.can_interact = false
+	var food_scene = foods.pick_random() #pick new food from list
+	var food_in_hand = spawn_new_food_in_hand(food_scene)
 	current_state = State.BUSY
 	animator.play("DELIVER")
 	await animator.animation_finished
-	
-	_place_food()
+	food_in_hand.queue_free()
+	_place_food(food_scene)
+
+func spawn_new_food_in_hand(food):
+	var food_scene = food.instantiate()
+	$HandPoint.add_child(food_scene)
+	#food_scene.transform = $HandPoint.transform
+	return food_scene
+	pass
 
 func _walk_to_exit(delta: float) -> void:
 	current_state = State.BUSY
@@ -47,9 +58,9 @@ func _walk_to_exit(delta: float) -> void:
 	current_state = State.DONE
 	FoodHandler.can_interact = true
 
-func _place_food() -> void:
+func _place_food(food) -> void:
 	current_state = State.BUSY
-	FoodHandler.food_arrived()
+	FoodHandler.food_arrived(food)
 	await get_tree().create_timer(1.0).timeout
 	current_state = State.LEAVING
 
