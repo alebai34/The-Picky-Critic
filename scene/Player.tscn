@@ -29,3 +29,9 @@ mouse_filter = 2
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 script = ExtResource("2_fvtld")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1162775626]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1547807182]
+offset_right = 40.0
+offset_bottom = 23.0

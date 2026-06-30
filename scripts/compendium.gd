@@ -8,6 +8,7 @@ extends Node3D
 
 @onready var pages = $Pages.get_children()
 
+
 var current_index = 0
 var is_turning = false
 var is_focused = false
@@ -40,12 +41,16 @@ func _process(delta):
 		is_turning = false
 
 	if Input.is_action_just_pressed("ui_cancel") and is_focused:
+		get_viewport().set_input_as_handled()
+		GameManager.focused = false
 		close_book()
+		
 
 func interact():
 	if is_focused:
 		return
 	print("Compendium was clicked!")
+	GameManager.focused = true
 	open_book()
 
 func open_book():

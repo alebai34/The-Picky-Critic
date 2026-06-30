@@ -10,6 +10,7 @@ var _held_xic: Node = null
 var sensitivity := 0.002
 var can_look := true
 
+
 signal health_changed(new_hp: int)
 
 
@@ -38,17 +39,24 @@ func _on_food_binned():
 	
 func _input(event):
 	# ESC toggles locked mouse.
-	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE and GameManager.focused == false:
+		
 		can_look = !can_look
+
 		if can_look:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			GameManager.paused = false
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			GameManager.paused = true
 	
 	# interact detection.
+	
 	if event.is_action_pressed("interact") and ray_cast_3d.is_colliding():
 		var collider = ray_cast_3d.get_collider()
 		if collider.has_method("interact"):
+			if GameManager.paused == true:
+				return
 			collider.interact()
 			get_viewport().set_input_as_handled()
 		return
@@ -60,7 +68,7 @@ func _input(event):
 
 
 	# mouse look.
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and GameManager.focused == false:
 		rotate_y(-event.relative.x * sensitivity)
 		cam.rotate_x(-event.relative.y * sensitivity)
 
@@ -69,9 +77,3 @@ func _input(event):
 			deg_to_rad(-80),
 			deg_to_rad(80)
 		)
- 
-func _try_interact() -> void:
-	if not ray_cast_3d.is_colliding():
-		return
-	var target = ray_cast_3d.get_collider()
-	

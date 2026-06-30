@@ -12,14 +12,14 @@ script = ExtResource("1_33n8n")
 [node name="Control" type="Control" parent="." unique_id=779598928]
 layout_mode = 2
 
-[node name="HeartContainer3" parent="Control" unique_id=376623184 instance=ExtResource("2_te7hs")]
+[node name="HeartContainer1" parent="Control" unique_id=376623184 instance=ExtResource("2_te7hs")]
 layout_mode = 1
 offset_left = 43.39477
 offset_top = 1.0028367
 offset_right = 43.39477
 offset_bottom = -26.397165
 
-[node name="HeartContainer4" parent="Control" unique_id=620599285 instance=ExtResource("2_te7hs")]
+[node name="HeartContainer2" parent="Control" unique_id=620599285 instance=ExtResource("2_te7hs")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -29,7 +29,7 @@ offset_top = 1.0028362
 offset_right = 12.110169
 offset_bottom = 201.00284
 
-[node name="HeartContainer2" parent="Control" unique_id=1014491796 instance=ExtResource("2_te7hs")]
+[node name="HeartContainer3" parent="Control" unique_id=1014491796 instance=ExtResource("2_te7hs")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
