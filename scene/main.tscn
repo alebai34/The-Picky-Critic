@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chksiicbbjlij" path="res://assets/models/Table.glb" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://assets/food_scenes/dish_1.tscn" id="2_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://b8f11wvixwy1t" path="res://assets/food_scenes/dish_2.tscn" id="2_wscrc"]
-[ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
+[ext_resource type="PackedScene" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
 [ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="7_wscrc"]
@@ -478,7 +478,7 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.03072863, 0.0027892354, 0.9999593, 0.008068911, 0.030752024, 0.007979682, -0.9994492, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728629, 0.0027892354, 0.9999593, 0.00806891, 0.030752024, 0.007979682, -0.99944913, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -490,6 +490,9 @@ libraries/ = SubResource("AnimationLibrary_mswub")
 
 [node name="Compendium" parent="." unique_id=1893867575 node_paths=PackedStringArray("player_camera", "book_camera") instance=ExtResource("9_k65ib")]
 transform = Transform3D(0.95394415, 0.0055030724, 0.2999339, -0.0045065274, 0.9999818, -0.004014206, -0.29995054, 0.0024776757, 0.9539514, 14.934416, 5.817361, -21.793022)
+hold_position = null
+hold_rotation_deg = null
+lerp_speed = null
 player_camera = NodePath("../Player/Camera3D")
 book_camera = NodePath("../ReadMarker/ReadCamera")
 

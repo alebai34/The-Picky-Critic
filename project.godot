@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 FoodHandler="*uid://c5scpu2ixqaab"
 CameraTransition="*uid://c6ncygmppxah"
+GameManager="*uid://cpx6wfeu6ogum"
 
 [filesystem]
 
