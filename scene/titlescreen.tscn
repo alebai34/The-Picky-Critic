@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ce0btqvr387wo"]
+
+[ext_resource type="Script" uid="uid://cjd3rxgedqjfd" path="res://scripts/titlescreen.gd" id="1_1cin3"]
+[ext_resource type="Texture2D" uid="uid://08ghnw63namr" path="res://assets/images/ThePickyCritic.png" id="2_o5m4b"]
+
+[node name="titlescreen" type="Control" unique_id=178232942]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1cin3")
+
+[node name="ThePickyCritic" type="Sprite2D" parent="." unique_id=1724316004]
+position = Vector2(721.00006, 325.06253)
+scale = Vector2(0.45456952, 0.45456955)
+texture = ExtResource("2_o5m4b")
+
+[node name="Button" type="Button" parent="." unique_id=718960043]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 214.0
+offset_right = 245.07275
+offset_bottom = 275.0
+text = "Play"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
