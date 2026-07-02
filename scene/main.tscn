@@ -478,7 +478,7 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.03072863, 0.0027892354, 0.9999593, 0.008068911, 0.030752024, 0.007979682, -0.9994492, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728627, 0.0027892354, 0.9999593, 0.00806891, 0.030752024, 0.007979682, -0.9994491, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
