@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
 [ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://bbx2r4er8y7yo" path="res://scene/compendium.tscn" id="9_k65ib"]
-[ext_resource type="PackedScene" uid="uid://criu63ikep0w3" path="res://assets/food_scenes/dish_4_fish.tscn" id="12_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
 [ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
+[ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://pause_menu.tscn" id="15_v2gmf"]
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -478,8 +478,8 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728627, 0.0027892354, 0.9999593, 0.00806891, 0.030752024, 0.007979682, -0.9994491, -16.559774, 0.05471419, 21.04017)
-foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728629, 0.0027892354, 0.9999593, 0.00806891, 0.030752024, 0.007979682, -0.99944913, -16.559774, 0.05471419, 21.04017)
+foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
@@ -516,6 +516,8 @@ transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-1
 
 [node name="Page10" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="9" unique_id=1459088998 instance=ExtResource("8_mswub")]
 transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="CanvasLayer" parent="." unique_id=911729458 instance=ExtResource("15_v2gmf")]
 
 [editable path="Player"]
 [editable path="Compendium"]
