@@ -46,6 +46,7 @@ func _input(event):
 		if can_look:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			GameManager.paused = false
+			#toggle_pause()
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			GameManager.paused = true
