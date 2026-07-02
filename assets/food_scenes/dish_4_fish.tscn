@@ -1,10 +1,10 @@
-[gd_scene format=4 uid="uid://b8f11wvixwy1t"]
+[gd_scene format=4 uid="uid://criu63ikep0w3"]
 
-[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_74o01"]
-[ext_resource type="PackedScene" uid="uid://ba3121j45lyc1" path="res://assets/models/Brain.glb" id="1_h4ulk"]
+[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_cn85t"]
+[ext_resource type="PackedScene" uid="uid://cr3agklob35gb" path="res://assets/models/fish.glb" id="2_qs3bg"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_h4ulk"]
-radius = 0.37904266
+[sub_resource type="BoxShape3D" id="BoxShape3D_7a2aq"]
+size = Vector3(0.8269043, 0.21203613, 0.62252045)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irhai"]
 
@@ -40,16 +40,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0f3vp")
 
-[node name="Dish_2_Brain" type="Area3D" unique_id=432997113]
-script = ExtResource("1_74o01")
-
-[node name="Brain" parent="." unique_id=2099187444 instance=ExtResource("1_h4ulk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+[node name="Dish_4_fish" type="Area3D" unique_id=432997113]
+script = ExtResource("1_cn85t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1302222142]
-transform = Transform3D(1.655, 0, 0, 0, 1.655, 0, 0, 0, 1.655, 0.02798462, 0.56161475, -0.085440874)
-shape = SubResource("SphereShape3D_h4ulk")
+transform = Transform3D(1.655, 0, 0, 0, 1.655, 0, 0, 0, 1.655, 0.2584967, 0.3021119, 0.002042871)
+shape = SubResource("BoxShape3D_7a2aq")
 
 [node name="Plate" type="MeshInstance3D" parent="." unique_id=1745744529]
 transform = Transform3D(0.5, 0, 0, 0, 0.29229176, 0, 0, 0, 0.5, 0, 0.316, 0)
 mesh = SubResource("ArrayMesh_vub5d")
+
+[node name="fish2" parent="." unique_id=1297879768 instance=ExtResource("2_qs3bg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
