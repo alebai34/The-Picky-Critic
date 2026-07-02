@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://df4fadhukpd5"]
 
+[ext_resource type="Script" uid="uid://dn8chsem2da3x" path="res://pause_menu.gd" id="1_hdmo1"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=911729458]
+script = ExtResource("1_hdmo1")
 
 [node name="PauseMenu" type="Control" parent="." unique_id=1472248908]
 layout_mode = 3
@@ -39,3 +42,6 @@ text = "Resume"
 [node name="Quit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1262430102]
 layout_mode = 2
 text = "Quit"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

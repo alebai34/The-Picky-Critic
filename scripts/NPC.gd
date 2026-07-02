@@ -3,7 +3,7 @@ enum State { WALKING_TO_PLAYER, DOING_ANIMATION, LEAVING, DONE, BUSY }
 @onready var animator: AnimationPlayer = $AnimationPlayer
 @export var walk_speed: float = 0.15
 @export var stop_point: float = 0.5
-@onready var food: Node3D = $HandPoint/Tentacle
+#@onready var food: Node3D = $HandPoint/Tentacle
 @onready var hand_point: Marker3D = $HandPoint
 var current_food : PackedScene
 @export var foods : Array[PackedScene]

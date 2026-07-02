@@ -8,7 +8,6 @@ extends Node3D
 
 @onready var pages = $Pages.get_children()
 
-
 var current_index = 0
 var is_turning = false
 var is_focused = false
@@ -18,12 +17,15 @@ func _ready():
 		page.hide()
 	pages[0].show()
 	book_camera.current = false
+	GameManager.close_book_requested.connect(_on_close_book_requested)
 
 func _process(delta):
 	if is_turning:
 		return
+	if not is_focused:
+		return
 
-	if Input.is_action_just_pressed("ui_right") and is_focused and current_index < pages.size() - 1:
+	if Input.is_action_just_pressed("ui_right") and current_index < pages.size() - 1:
 		is_turning = true
 		pages[current_index + 1].show()
 		await turn_page(pages[current_index], 0.0, 180.0)
@@ -31,7 +33,7 @@ func _process(delta):
 		refresh()
 		is_turning = false
 
-	if Input.is_action_just_pressed("ui_left") and is_focused and current_index > 0:
+	if Input.is_action_just_pressed("ui_left") and current_index > 0:
 		is_turning = true
 		if current_index - 2 >= 0:
 			pages[current_index - 2].show()
@@ -39,12 +41,6 @@ func _process(delta):
 		current_index -= 1
 		refresh()
 		is_turning = false
-
-	if Input.is_action_just_pressed("ui_cancel") and is_focused:
-		get_viewport().set_input_as_handled()
-		GameManager.focused = false
-		close_book()
-		
 
 func interact():
 	if is_focused:
@@ -60,6 +56,12 @@ func open_book():
 func close_book():
 	is_focused = false
 	player_camera.current = true
+
+func _on_close_book_requested():
+	if is_focused:
+		is_focused = false
+		GameManager.focused = false
+		close_book()
 
 func turn_page(page: Node, from_z: float, to_z: float):
 	page.rotation_degrees.z = from_z

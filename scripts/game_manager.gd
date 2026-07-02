@@ -1,12 +1,18 @@
 extends Node
 
-@onready var pause_menu = $CanvasLayer/PauseMenu
-var focused = false
-var paused = false
+signal close_book_requested
+signal pause_requested
+signal resume_requested
 
-func _ready() -> void:
-	pause_menu.visible = false
-	
-#func toggle_pause():
-#	get_tree().paused = !get_tree().paused
-#	pause_menu.visible = get_tree().paused
+var focused: bool = false
+var game_paused: bool = false
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		if focused:
+			close_book_requested.emit()
+		elif game_paused:
+			resume_requested.emit()
+		else:
+			pause_requested.emit()
+		get_viewport().set_input_as_handled()
