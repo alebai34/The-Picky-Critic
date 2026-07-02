@@ -9,11 +9,10 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5273104, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1841106648]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -1.1)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.08800036, -1.1)
 light_color = Color(1, 0.8352941, 0.5019608, 1)
-light_energy = 3.0
-light_bake_mode = 1
 shadow_enabled = true
 shadow_blur = 0.3
-spot_range = 4096.0
+spot_range = 39.777443
+spot_angle = 15.516944
 script = ExtResource("2_h21le")

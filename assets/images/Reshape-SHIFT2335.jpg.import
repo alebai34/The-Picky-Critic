@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://08ghnw63namr"
-path.s3tc="res://.godot/imported/ThePickyCritic.png-a16d21f1b24161a1ef99b7bb2dacd733.s3tc.ctex"
+uid="uid://ce0y8wsr5rox1"
+path.s3tc="res://.godot/imported/Reshape-SHIFT2335.jpg-73174539ac1e4aa3859d7574f1f998c0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/ThePickyCritic.png"
-dest_files=["res://.godot/imported/ThePickyCritic.png-a16d21f1b24161a1ef99b7bb2dacd733.s3tc.ctex"]
+source_file="res://assets/images/Reshape-SHIFT2335.jpg"
+dest_files=["res://.godot/imported/Reshape-SHIFT2335.jpg-73174539ac1e4aa3859d7574f1f998c0.s3tc.ctex"]
 
 [params]
 
