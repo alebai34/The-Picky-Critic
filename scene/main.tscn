@@ -15,7 +15,20 @@
 [ext_resource type="PackedScene" uid="uid://criu63ikep0w3" path="res://assets/food_scenes/dish_4_fish.tscn" id="12_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
 [ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
-[ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://pause_menu.tscn" id="15_v2gmf"]
+[ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://scene/pause_menu.tscn" id="15_v2gmf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcbur"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_smf0o"]
+sky_material = SubResource("ProceduralSkyMaterial_jcbur")
+
+[sub_resource type="Environment" id="Environment_tv8i1"]
+background_mode = 2
+sky = SubResource("Sky_smf0o")
+ambient_light_sky_contribution = 0.0
+glow_enabled = true
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -398,9 +411,13 @@ _data = {
 &"START": SubResource("Animation_wscrc")
 }
 
-[node name="Main" type="Node3D" unique_id=2118389225]
+[node name="Main" type="Node3D" unique_id=2118389225 node_paths=PackedStringArray("waiter")]
 transform = Transform3D(0.9999771, -0.0054932614, -0.0039482755, 0.005503073, 0.99998176, 0.0024776678, 0.0039345887, -0.0024993457, 0.99998915, 0, 0, 0)
 script = ExtResource("1_4j5ol")
+waiter = NodePath("NPC")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1617406650]
+environment = SubResource("Environment_tv8i1")
 
 [node name="ReadMarker" type="Marker3D" parent="." unique_id=1009630347]
 transform = Transform3D(-0.95773435, 0.28659073, 0.024714813, 0.027375568, 0.0052803867, 0.9996113, 0.2863488, 0.9580385, -0.012902784, 15.243442, 8.238899, -21.854935)
@@ -443,6 +460,10 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -1.49, 0)
 [node name="Cube" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1425713865]
 mesh = SubResource("ArrayMesh_cfoiu")
 
+[node name="Cube2" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1179510789]
+transform = Transform3D(1, -7.2759576e-11, -9.313226e-10, 4.311005e-10, 1, 2.3283064e-10, 0, 0, 1, 0.08322226, 15.122605, 0.037469577)
+mesh = SubResource("ArrayMesh_cfoiu")
+
 [node name="Cube_010" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=807695681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 26, -15)
 mesh = SubResource("ArrayMesh_brxj0")
@@ -475,11 +496,21 @@ mesh = SubResource("ArrayMesh_gbwuu")
 [node name="LampLight" parent="." unique_id=1333559538 instance=ExtResource("8_of57s")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.631692, 19.023876, -18.388426)
 
+[node name="SpotLight3D" parent="LampLight" index="1" unique_id=1841106648]
+transform = Transform3D(0.5, 2.3283064e-09, 3.4924597e-09, 0, -2.1964752e-08, 0.5, 4.656613e-10, -0.5, -2.041179e-08, -0.00038528442, -0.15554619, -1.0991445)
+shadow_bias = 0.144
+spot_attenuation = 0.41
+spot_angle = 53.91
+
 [node name="LampLight2" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
 
+[node name="SpotLight3D" parent="LampLight2" index="1" unique_id=1841106648]
+transform = Transform3D(1, -4.1909516e-09, -3.011337e-09, -3.45608e-11, -4.377216e-08, 1, 0, -1, -3.655441e-08, -0.0042819977, -0.77830887, -1.1019287)
+shadow_bias = 0.327
+
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728627, 0.0027892354, 0.9999593, 0.00806891, 0.030752024, 0.007979682, -0.9994491, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728625, 0.0027892354, 0.9999593, 0.008068909, 0.030752024, 0.007979682, -0.999449, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -521,4 +552,6 @@ transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-1
 [node name="PauseMenu" parent="." unique_id=911729458 instance=ExtResource("15_v2gmf")]
 
 [editable path="Player"]
+[editable path="LampLight"]
+[editable path="LampLight2"]
 [editable path="Compendium"]
