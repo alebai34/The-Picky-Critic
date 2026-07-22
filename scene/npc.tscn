@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d14y76ebs5o6i"]
 
 [ext_resource type="Script" uid="uid://bbax7pou2v05m" path="res://scripts/NPC.gd" id="1_54ctn"]
+[ext_resource type="PackedScene" uid="uid://l16ysigs1f3p" path="res://assets/models/WaitTest.fbx" id="2_ab2no"]
 [ext_resource type="PackedScene" uid="uid://byocqcv1ger7" path="res://assets/models/WaiterCan.glb" id="3_ab2no"]
 
 [sub_resource type="Animation" id="Animation_ab2no"]
@@ -15,6 +16,9 @@ _data = {
 [node name="NPC" type="CharacterBody3D" unique_id=1006315584]
 script = ExtResource("1_54ctn")
 
+[node name="WaitTest" parent="." unique_id=1518360501 instance=ExtResource("2_ab2no")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.5, 0)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=527760165]
 
 [node name="HandPoint" type="Marker3D" parent="." unique_id=1622513715]
@@ -22,38 +26,39 @@ transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0
 
 [node name="WaiterCan" parent="." unique_id=1600502519 instance=ExtResource("3_ab2no")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.5, 0)
+visible = false
 
-[node name="Cube" parent="WaiterCan" index="0" unique_id=613492864]
+[node name="Cube" parent="WaiterCan" index="0" unique_id=1264422688]
 transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Cylinder" parent="WaiterCan" index="1" unique_id=1330069087]
+[node name="Cylinder" parent="WaiterCan" index="1" unique_id=1455393863]
 transform = Transform3D(0.4939654, 0.86789656, 0.05247663, -0.13116376, 0.014716953, 0.99125165, 0.8595315, -0.49652693, 0.1211063, -0.7, 3, 0.39999998)
 
-[node name="Cylinder_001" parent="WaiterCan" index="2" unique_id=112040573]
+[node name="Cylinder_001" parent="WaiterCan" index="2" unique_id=168158850]
 transform = Transform3D(-0.33031094, 0.90219235, 0.2773873, 0.57126844, -0.04285425, 0.81964386, 0.75136405, 0.4291998, -0.50123864, -0.7, 3, -0.40000004)
 
-[node name="Cube_001" parent="WaiterCan" index="3" unique_id=869123279]
+[node name="Cube_001" parent="WaiterCan" index="3" unique_id=1810847516]
 transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, -0.76785326, 2.3, 0)
 
-[node name="Cube_002" parent="WaiterCan" index="4" unique_id=1646971580]
+[node name="Cube_002" parent="WaiterCan" index="4" unique_id=1998236076]
 transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, -0.76785326, 2.3, 0)
 
-[node name="Sphere_001" parent="WaiterCan" index="5" unique_id=1654804133]
+[node name="Sphere_001" parent="WaiterCan" index="5" unique_id=1253184185]
 transform = Transform3D(0.9998477, 0.017452406, 0, -0.017452406, 0.9998477, 0, 0, 0, 1, 0, 1.5, 1.1)
 
-[node name="Cube_003" parent="WaiterCan" index="7" unique_id=677752741]
+[node name="Cube_003" parent="WaiterCan" index="7" unique_id=1460670843]
 transform = Transform3D(0.9998477, 0.017452406, 0, -0.015817251, 0.9061698, 0.4226182, 0.0073757046, -0.42255384, 0.9063078, 0, 4, 0.3)
 
-[node name="Plane" parent="WaiterCan" index="8" unique_id=974360072]
+[node name="Plane" parent="WaiterCan" index="8" unique_id=1737789107]
 transform = Transform3D(0.59990865, 0.010471444, 0, -0.010471444, 0.59990865, 0, 0, 0, 0.6, 0, 1, 0)
 
-[node name="Plane_001" parent="WaiterCan" index="9" unique_id=135329137]
+[node name="Plane_001" parent="WaiterCan" index="9" unique_id=426190981]
 transform = Transform3D(0.5709105, 0.009965278, -0.18428783, -0.010471445, 0.59990865, 0, 0.18425976, 0.0032162657, 0.5709975, 0, 0.7, 0)
 
-[node name="Plane_002" parent="WaiterCan" index="10" unique_id=1560716024]
+[node name="Plane_002" parent="WaiterCan" index="10" unique_id=1799948849]
 transform = Transform3D(0.5009658, 0.008744391, 0.33008602, -0.010471443, 0.59990865, 0, -0.33003575, -0.0057607964, 0.50104207, 0, 0.39999998, 0)
 
-[node name="AnimationPlayer" parent="WaiterCan" index="11" unique_id=144201281]
+[node name="AnimationPlayer" parent="WaiterCan" index="11" unique_id=494093756]
 libraries/Local = SubResource("AnimationLibrary_8oust")
 autoplay = &"Local/HandHold"
 
