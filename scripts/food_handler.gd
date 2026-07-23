@@ -9,6 +9,7 @@ var can_interact = false
 
 func player_lose_health():
 	s_lose_health.emit()
+	GameManager.lose_health(1)
 
 func food_arrived(food):
 	print("placing food")

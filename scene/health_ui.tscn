@@ -1,39 +1,22 @@
 [gd_scene format=3 uid="uid://b64ug21hvkivr"]
 
-[ext_resource type="Script" uid="uid://cps70bw2vwqon" path="res://scripts/health_ui.gd" id="1_33n8n"]
+[ext_resource type="Script" uid="uid://b6mwde0wexavx" path="res://scene/health_ui.gd" id="1_33n8n"]
 [ext_resource type="PackedScene" uid="uid://7btbwsjpn335" path="res://scene/heart_container.tscn" id="2_te7hs"]
 
-[node name="HealthUI" type="HBoxContainer" unique_id=468354661]
-offset_right = 300.0
-offset_bottom = 200.0
-scale = Vector2(0.9909028, 0.99717164)
+[node name="HealthUI" type="Control" unique_id=839760456]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_33n8n")
+heart_container = ExtResource("2_te7hs")
 
-[node name="Control" type="Control" parent="." unique_id=779598928]
+[node name="HeartBox" type="HBoxContainer" parent="." unique_id=971009745]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeartContainer" parent="HeartBox" unique_id=376623184 instance=ExtResource("2_te7hs")]
 layout_mode = 2
-
-[node name="HeartContainer1" parent="Control" unique_id=376623184 instance=ExtResource("2_te7hs")]
-layout_mode = 1
-offset_left = 43.39477
-offset_top = 1.0028367
-offset_right = 43.39477
-offset_bottom = -26.397165
-
-[node name="HeartContainer2" parent="Control" unique_id=620599285 instance=ExtResource("2_te7hs")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 12.110169
-offset_top = 1.0028362
-offset_right = 12.110169
-offset_bottom = 201.00284
-
-[node name="HeartContainer3" parent="Control" unique_id=1014491796 instance=ExtResource("2_te7hs")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -19.174435
-offset_right = -19.174435
-offset_bottom = 200.0
