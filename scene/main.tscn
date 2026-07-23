@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bbx2r4er8y7yo" path="res://scene/compendium.tscn" id="9_k65ib"]
 [ext_resource type="PackedScene" uid="uid://criu63ikep0w3" path="res://assets/food_scenes/dish_4_fish.tscn" id="12_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
+[ext_resource type="PackedScene" uid="uid://d0pkui8nx8koj" path="res://assets/food_scenes/dish_5_pixie_dust.tscn" id="13_smf0o"]
 [ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
 [ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://scene/pause_menu.tscn" id="15_v2gmf"]
 
@@ -462,6 +463,7 @@ mesh = SubResource("ArrayMesh_cfoiu")
 
 [node name="Cube2" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=1179510789]
 transform = Transform3D(1, -7.2759576e-11, -9.313226e-10, 4.311005e-10, 1, 2.3283064e-10, 0, 0, 1, 0.08322226, 15.122605, 0.037469577)
+visible = false
 mesh = SubResource("ArrayMesh_cfoiu")
 
 [node name="Cube_010" type="MeshInstance3D" parent="EnvironmentRestaurant" unique_id=807695681]
@@ -510,8 +512,8 @@ transform = Transform3D(1, -4.1909516e-09, -3.011337e-09, -3.45608e-11, -4.37721
 shadow_bias = 0.327
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728623, 0.0027892354, 0.9999593, 0.008068909, 0.030752024, 0.007979682, -0.99944896, -16.559774, 0.05471419, 21.04017)
-foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728618, 0.0027892354, 0.9999593, 0.008068907, 0.030752024, 0.007979682, -0.9994488, -16.559774, 0.05471419, 21.04017)
+foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf"), ExtResource("13_smf0o")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
