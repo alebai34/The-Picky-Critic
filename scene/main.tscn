@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
+[ext_resource type="PackedScene" uid="uid://bjgcqivkyhftr" path="res://assets/models/ceiling_light.tscn" id="7_smf0o"]
 [ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="7_wscrc"]
 [ext_resource type="PackedScene" uid="uid://dd25a04aqcdkw" path="res://scene/pages/green_page.tscn" id="8_mswub"]
 [ext_resource type="PackedScene" uid="uid://dpodnkuoelgyp" path="res://scene/lamp_light.tscn" id="8_of57s"]
@@ -31,6 +32,10 @@ ambient_light_color = Color(0.10747979, 0.107479714, 0.10747973, 1)
 ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.9
 glow_enabled = true
+glow_levels/2 = 1.0
+glow_levels/3 = 1.0
+glow_levels/4 = 0.5
+glow_levels/5 = 0.2
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
@@ -504,15 +509,11 @@ shadow_bias = 0.144
 spot_attenuation = 0.41
 spot_angle = 53.91
 
-[node name="LampLight2" parent="." unique_id=2014662339 instance=ExtResource("8_of57s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.425806, 12.593084, -22.71676)
-
-[node name="SpotLight3D" parent="LampLight2" index="1" unique_id=1841106648]
-transform = Transform3D(1, -4.1909516e-09, -3.011337e-09, -3.45608e-11, -4.377216e-08, 1, 0, -1, -3.655441e-08, -0.0042819977, -0.77830887, -1.1019287)
-shadow_bias = 0.327
+[node name="CeilingLight" parent="." unique_id=1240205522 instance=ExtResource("7_smf0o")]
+transform = Transform3D(1, -7.2759576e-11, -3.7252903e-09, -3.45608e-11, 1, 0, 0, 0, 1, 13.263813, 18.059002, -17.294231)
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728621, 0.0027892354, 0.9999593, 0.008068908, 0.030752024, 0.007979682, -0.9994489, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.03072862, 0.0027892354, 0.9999593, 0.008068908, 0.030752024, 0.007979682, -0.99944884, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -562,5 +563,6 @@ transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-1
 
 [editable path="Player"]
 [editable path="LampLight"]
-[editable path="LampLight2"]
+[editable path="LampLight/Lamp"]
+[editable path="CeilingLight"]
 [editable path="Compendium"]
