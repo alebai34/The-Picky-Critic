@@ -11,12 +11,6 @@ var can_look := true
 
 signal health_changed(new_hp: int)
 
-func lose_health():
-	health -= 1
-	print("you lose a health, your health is now ", health)
-	if health <= 0:
-		die()
-
 func die():
 	print("you die")
 	return
@@ -25,7 +19,6 @@ func die():
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	ray_cast_3d.enabled = true
-	FoodHandler.s_lose_health.connect(lose_health)
 	FoodHandler.s_food_binned.connect(_on_food_binned)
 	GameManager.pause_requested.connect(_on_pause_requested)
 	GameManager.resume_requested.connect(_on_resume_requested)
