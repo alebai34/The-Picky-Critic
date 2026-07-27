@@ -27,7 +27,9 @@ sky_material = SubResource("ProceduralSkyMaterial_jcbur")
 [sub_resource type="Environment" id="Environment_tv8i1"]
 background_mode = 2
 sky = SubResource("Sky_smf0o")
+ambient_light_color = Color(0.10747979, 0.107479714, 0.10747973, 1)
 ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.9
 glow_enabled = true
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
@@ -510,7 +512,7 @@ transform = Transform3D(1, -4.1909516e-09, -3.011337e-09, -3.45608e-11, -4.37721
 shadow_bias = 0.327
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728623, 0.0027892354, 0.9999593, 0.008068909, 0.030752024, 0.007979682, -0.99944896, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728621, 0.0027892354, 0.9999593, 0.008068908, 0.030752024, 0.007979682, -0.9994489, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
