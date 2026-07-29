@@ -1,7 +1,7 @@
 extends Node3D
 
 #@export var foods : Array[PackedScene]
-@onready var food_location: Marker3D = $Table/FoodLocation
+@onready var food_location: Marker3D = $updatedMap/table2/FoodLocation
 @export var waiter : CharacterBody3D
 
 func _ready() -> void:
