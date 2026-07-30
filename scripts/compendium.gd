@@ -13,6 +13,7 @@ var is_turning = false
 var is_focused = false
 
 func _ready():
+	$Book.hide()
 	for page in pages:
 		page.hide()
 	pages[0].show()
@@ -45,17 +46,19 @@ func _process(delta):
 func interact():
 	if is_focused:
 		return
-	print("Compendium was clicked!")
+	#print("Compendium was clicked!")
 	GameManager.focused = true
 	open_book()
 
 func open_book():
+	$Book.show()
 	is_focused = true
-	book_camera.current = true
+	#book_camera.current = true
 
 func close_book():
+	$Book.hide
 	is_focused = false
-	player_camera.current = true
+	#player_camera.current = true
 
 func _on_close_book_requested():
 	if is_focused:

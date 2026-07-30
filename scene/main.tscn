@@ -13,9 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://bbx2r4er8y7yo" path="res://scene/compendium.tscn" id="9_k65ib"]
 [ext_resource type="PackedScene" uid="uid://criu63ikep0w3" path="res://assets/food_scenes/dish_4_fish.tscn" id="12_v2gmf"]
+[ext_resource type="PackedScene" uid="uid://c6jtmbvbvqa7" path="res://scene/pages/page3.tscn" id="13_0d4pv"]
 [ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
 [ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
 [ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://scene/pause_menu.tscn" id="15_v2gmf"]
+[ext_resource type="PackedScene" uid="uid://b1qn4h075m7qh" path="res://scene/book.tscn" id="16_gtqqq"]
 [ext_resource type="Texture2D" uid="uid://cu2m0nyagpjlt" path="res://assets/models/updatedMap_ConcreteStucco0254_2_350.jpg" id="18_0d4pv"]
 [ext_resource type="Texture2D" uid="uid://bcn01d78sw166" path="res://assets/models/updatedMap_Reshape-SHIFT2335.jpg" id="19_gtqqq"]
 [ext_resource type="Texture2D" uid="uid://bdi6jp7rqlr2v" path="res://assets/models/updatedMap_IMG_0107 - Copy - Copy - Copy - Copy.jpg" id="20_gn2wi"]
@@ -43,7 +45,7 @@ glow_levels/5 = 0.2
 
 [sub_resource type="Curve3D" id="Curve3D_p1hux"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.286642, 0.23918438, -16.15002, 0, 0, 0, 0, 0, 0, -26.37461, 0.23851109, 45.979668, 0, 0, 0, 0, 0, 0, 9.785635, 0.4100833, 46.649048, 0, 0, 0, 0, 0, 0, 10.654586, 0.17179787, -0.3381672, 0, 0, 0, 0, 0, 0, 9.64907, 0.22632933, -0.55869865, 0, 0, 0, 0, 0, 0, 8.965493, 0.09994221, 44.996346, 0, 0, 0, 0, 0, 0, -25.480732, 0.0076675415, 44.547497, 0, 0, 0, 0, 0, 0, -25.311787, 0.35279322, -9.056),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.306995, 0.27774996, -16.122303, 0, 0, 0, 0, 0, 0, -34.683796, 0.28415668, 46.012474, 0, 0, 0, 0, 0, 0, 9.785635, 0.4100833, 46.649048, 0, 0, 0, 0, 0, 0, 10.654586, 0.17179787, -0.3381672, 0, 0, 0, 0, 0, 0, 9.64907, 0.22632933, -0.55869865, 0, 0, 0, 0, 0, 0, 8.965493, 0.09994221, 44.996346, 0, 0, 0, 0, 0, 0, -32.69319, 0.047288418, 44.57597, 0, 0, 0, 0, 0, 0, -33.173573, 0.39598107, -9.024961),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
@@ -61,7 +63,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.03, 1.17, 2, 2.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-16.559774, 0.05471419, 21.04017), Vector3(20.153072, -0.1469638, 20.895212), Vector3(20.15307, -0.1469638, 20.895212), Vector3(19.997095, -0.047885958, -18.745977), Vector3(19.997095, -0.04788596, -18.745975)]
+"values": [Vector3(-33.559906, 0.14810255, 21.107292), Vector3(20.153072, -0.1469638, 20.895212), Vector3(20.15307, -0.1469638, 20.895212), Vector3(19.997095, -0.047885958, -18.745977), Vector3(19.997095, -0.04788596, -18.745975)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -73,12 +75,12 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.03, 1.17, 2, 2.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.008069369, -3.1108568, 0.0027894569), Vector3(-0.008069368, -3.1108568, 0.0027894573), Vector3(-0.010847877, -1.5400022, -0.005280953), Vector3(-0.010847876, -1.5400022, -0.005280952), Vector3(-0.006815298, -0.6557167, -0.0085076)]
+"values": [Vector3(-0.008069368, -3.1108568, 0.0027894569), Vector3(-0.008069368, -3.1108568, 0.0027894573), Vector3(-0.010847877, -1.5400022, -0.005280953), Vector3(-0.010847876, -1.5400022, -0.005280952), Vector3(-0.006815298, -0.6557167, -0.0085076)]
 }
 
 [sub_resource type="Animation" id="Animation_tqoya"]
 resource_name = "LEAVE"
-length = 2.0
+length = 2.8333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -86,10 +88,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2, 2.83),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(19.997095, -0.047885966, -18.745977), Vector3(19.997095, -0.04788597, -18.745975), Vector3(20.135202, -0.135616, 16.35494), Vector3(20.135202, -0.135616, 16.35494), Vector3(-12.079843, 0.041353814, 16.482138)]
+"values": [Vector3(19.997095, -0.047885966, -18.745977), Vector3(19.997095, -0.04788597, -18.745975), Vector3(20.135202, -0.135616, 16.35494), Vector3(20.135202, -0.135616, 16.35494), Vector3(-12.079843, 0.041353814, 16.482138), Vector3(-46.06822, 0.22806524, 16.616335)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -98,10 +100,10 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.12, 1.02, 1.13, 2, 2.83),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.006815298, -0.65571666, -0.0085076), Vector3(0.000357978, 1.4386381, -0.00090405205), Vector3(0.000357978, 1.438638, -0.0009040518), Vector3(-0.0022552288, 0.1296652, -0.0077715856), Vector3(-0.0022552286, 0.12966517, -0.007771587)]
+"values": [Vector3(-0.006815298, -0.65571666, -0.0085076), Vector3(0.000357978, 1.4386381, -0.00090405205), Vector3(0.000357978, 1.438638, -0.0009040518), Vector3(-0.0022552288, 0.1296652, -0.0077715856), Vector3(-0.0022552286, 0.12966517, -0.007771587), Vector3(-0.0022552283, 0.12966515, -0.007771588)]
 }
 
 [sub_resource type="Animation" id="Animation_k65ib"]
@@ -1255,7 +1257,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104588, 0, -22.78)
 curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
-transform = Transform3D(-0.9994821, 3.3318804e-07, -0.03075898, 0, 0.9999954, 1.0831302e-05, 0.03075898, 1.08266095e-05, -0.9994821, -28.286642, 0.23918438, -16.15002)
+transform = Transform3D(-0.9998979, -1.0340642e-06, -0.010028834, -5.6840475e-14, 0.99999416, -0.00010310017, 0.0100287795, -0.00010309915, -0.9999034, -35.306995, 0.27774996, -16.122303)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -1276,7 +1278,7 @@ transform = Transform3D(1, -7.2759576e-11, -3.7252903e-09, -3.45608e-11, 1, 0, 0
 surface_material_override/0 = null
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728618, 0.0027892354, 0.9999593, 0.008068907, 0.030752024, 0.007979682, -0.9994488, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994773, 0.0030360988, -0.030728607, 0.0027892347, 0.99995923, 0.008068904, 0.030752014, 0.007979682, -0.9994484, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -1298,11 +1300,11 @@ transform = Transform3D(0.95394415, 0.0055030724, 0.2999339, -0.0045065265, 0.99
 player_camera = NodePath("../Player/Camera3D")
 book_camera = NodePath("../ReadMarker/ReadCamera")
 
-[node name="Page3" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="2" unique_id=1359005368 instance=ExtResource("7_wscrc")]
-transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+[node name="Page3" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="2" unique_id=1359005368 instance=ExtResource("13_0d4pv")]
+transform = Transform3D(1.0000002, -3.6082248e-16, 1.7881393e-07, -5.551115e-16, 1, 2.220446e-16, -1.7881393e-07, -5.551115e-17, 1.0000002, 0, 0, 0)
 
 [node name="Page4" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="3" unique_id=1354020572 instance=ExtResource("8_mswub")]
-transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 0, 0, 0)
 
 [node name="Page5" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="4" unique_id=250431501 instance=ExtResource("7_wscrc")]
 transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
@@ -1321,6 +1323,8 @@ transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-1
 
 [node name="Page10" parent="Compendium/Pages" parent_id_path=PackedInt32Array(1893867575, 216592428) index="9" unique_id=1459088998 instance=ExtResource("8_mswub")]
 transform = Transform3D(-1.0000004, -2.7755576e-17, -2.9802322e-08, 3.1398495e-16, 1, 1.07552856e-16, 8.940697e-08, 0, -1.0000004, 0, 0, 0)
+
+[node name="Book" parent="Compendium" unique_id=1328806486 instance=ExtResource("16_gtqqq")]
 
 [node name="PauseMenu" parent="." unique_id=911729458 instance=ExtResource("15_v2gmf")]
 
@@ -1376,7 +1380,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4204235, 11.052911, -12.93
 mesh = SubResource("ArrayMesh_ibnwo")
 
 [node name="RightSideWall" type="MeshInstance3D" parent="updatedMap" unique_id=1581103726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 26, -15)
+transform = Transform3D(1, 3.9108272e-10, 0, 4.311005e-10, 1.0000001, 4.656613e-10, -4.656613e-10, 0, 1, -5.0146484, 26.009308, -18.723095)
 mesh = SubResource("ArrayMesh_mmcgy")
 
 [node name="table1" type="MeshInstance3D" parent="updatedMap" unique_id=456770109]

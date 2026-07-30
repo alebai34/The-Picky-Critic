@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://b1qn4h075m7qh"]
+
+[ext_resource type="Script" uid="uid://bg04ypkmwg73i" path="res://book.gd" id="1_mftuw"]
+[ext_resource type="Texture2D" uid="uid://cxt2s2teot7tr" path="res://assets/images/EledoneCirrhosa.jpg" id="2_7pxmv"]
+[ext_resource type="Texture2D" uid="uid://8imjf1cjqj0s" path="res://assets/images/bioluminatie blue.png" id="2_rnek7"]
+[ext_resource type="Texture2D" uid="uid://dc7gx6lfjqj6x" path="res://assets/images/bioluminatie green.png" id="3_5ynty"]
+[ext_resource type="Texture2D" uid="uid://dtcwqen0c55lo" path="res://assets/images/bioluminatie blue.jpg" id="3_sem1a"]
+[ext_resource type="Texture2D" uid="uid://1sx43vq4igk8" path="res://assets/images/EledoneCirrhosa.png" id="5_rdmoc"]
+[ext_resource type="Texture2D" uid="uid://ygg8jf334m7q" path="res://assets/images/sandwich.jpg" id="6_mls3x"]
+[ext_resource type="Texture2D" uid="uid://bncfk60k32w8e" path="res://assets/images/SandWitch.png" id="7_eqnrx"]
+
+[sub_resource type="Shader" id="Shader_rnek7"]
+code = "shader_type canvas_item;
+
+// 0.0 = lying flat, 1.0 = folded all the way onto the spine.
+uniform float fold : hint_range(0.0, 1.0) = 0.0;
+// Current rect width in pixels — set from script each turn (size can change).
+uniform float page_width = 200.0;
+// true if this page's spine (the edge it pivots on) is its right edge.
+uniform bool pivot_right = false;
+
+void vertex() {
+	// Distance from the spine, in pixels, regardless of which side it's on.
+	float sx = pivot_right ? (page_width - VERTEX.x) : VERTEX.x;
+	float collapsed = sx * (1.0 - fold);
+	VERTEX.x = pivot_right ? (page_width - collapsed) : collapsed;
+}
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	// 0 at the spine, 1 at the outer edge — used for shading, not geometry.
+	float sx_n = pivot_right ? (1.0 - UV.x) : UV.x;
+
+	// Shadow deepens near the spine as the page folds toward it.
+	float shadow = (1.0 - smoothstep(0.0, 1.0, sx_n)) * fold;
+	COLOR.rgb *= mix(1.0, 0.35, shadow);
+
+	// A thin bright rim right at the curling edge fakes light catching the roll.
+	float rim = 1.0 - smoothstep(0.0, 0.08, sx_n);
+	COLOR.rgb += rim * fold * 0.35;
+}
+"
+
+[node name="Book" type="CanvasLayer" unique_id=1328806486]
+script = ExtResource("1_mftuw")
+pages = Array[Texture2D]([ExtResource("2_rnek7"), ExtResource("3_5ynty"), ExtResource("2_7pxmv"), ExtResource("5_rdmoc"), ExtResource("6_mls3x"), ExtResource("7_eqnrx")])
+page_curl_shader = SubResource("Shader_rnek7")
+
+[node name="RPage" type="TextureRect" parent="." unique_id=661622792]
+offset_left = 591.0
+offset_top = 1.0
+offset_right = 1124.0
+offset_bottom = 643.0
+texture = ExtResource("2_7pxmv")
+expand_mode = 3
+
+[node name="TurnPageFront" type="TextureRect" parent="." unique_id=1930057120]
+offset_left = 591.0
+offset_top = 1.0
+offset_right = 1124.0
+offset_bottom = 643.0
+texture = ExtResource("2_7pxmv")
+expand_mode = 3
+
+[node name="LPage" type="TextureRect" parent="." unique_id=1698952964]
+offset_left = 53.0
+offset_top = 4.0
+offset_right = 586.0
+offset_bottom = 646.0
+texture = ExtResource("3_sem1a")
+expand_mode = 3
+
+[node name="TurnPageBack" type="TextureRect" parent="." unique_id=496511166]
+offset_left = 53.0
+offset_top = 4.0
+offset_right = 586.0
+offset_bottom = 646.0
+texture = ExtResource("3_sem1a")
+expand_mode = 3

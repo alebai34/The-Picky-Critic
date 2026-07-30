@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ygg8jf334m7q"
-path.s3tc="res://.godot/imported/sandwich.jpg-32db15440e8dd8d4d9add8624ff9c64e.s3tc.ctex"
+uid="uid://bncfk60k32w8e"
+path.s3tc="res://.godot/imported/SandWitch.png-8a346c1cabd651753d9e22bb56081746.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://scene/pages/sandwich.jpg"
-dest_files=["res://.godot/imported/sandwich.jpg-32db15440e8dd8d4d9add8624ff9c64e.s3tc.ctex"]
+source_file="res://assets/images/SandWitch.png"
+dest_files=["res://.godot/imported/SandWitch.png-8a346c1cabd651753d9e22bb56081746.s3tc.ctex"]
 
 [params]
 
