@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="1_bsrgg"]
 [ext_resource type="Texture2D" uid="uid://1sx43vq4igk8" path="res://assets/images/EledoneCirrhosa.png" id="2_43ibe"]
-[ext_resource type="Texture2D" uid="uid://dc7gx6lfjqj6x" path="res://assets/images/bioluminatie green.png" id="3_e45vv"]
+[ext_resource type="Texture2D" uid="uid://bncfk60k32w8e" path="res://scene/pages/SandWitch.png" id="3_43ibe"]
 
 [node name="Page" unique_id=1359005368 instance=ExtResource("1_bsrgg")]
 
@@ -10,4 +10,4 @@
 texture = ExtResource("2_43ibe")
 
 [node name="Back" parent="." index="1" unique_id=169842178]
-texture = ExtResource("3_e45vv")
+texture = ExtResource("3_43ibe")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c6jtmbvbvqa7"]
+
+[ext_resource type="PackedScene" uid="uid://bdiwquak3hyso" path="res://scene/pages/page.tscn" id="1_jwlbb"]
+[ext_resource type="Texture2D" uid="uid://ygg8jf334m7q" path="res://scene/pages/sandwich.jpg" id="3_35viw"]
+
+[node name="Page" unique_id=1359005368 instance=ExtResource("1_jwlbb")]
+
+[node name="Front" parent="." index="0" unique_id=289255592]
+texture = ExtResource("3_35viw")
+
+[node name="Back" parent="." index="1" unique_id=169842178]
+texture = ExtResource("3_35viw")
