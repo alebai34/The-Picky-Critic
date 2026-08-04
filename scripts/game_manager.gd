@@ -9,6 +9,7 @@ var focused: bool = false
 var game_paused: bool = false
 var health: = 6
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		if focused:
