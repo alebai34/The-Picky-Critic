@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://5r0gs8odikua"]
 
 [ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scripts/main.gd" id="1_4j5ol"]
+[ext_resource type="Texture2D" uid="uid://cu7delrgmv1vj" path="res://assets/images/Night0.exr" id="2_0d4pv"]
 [ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://assets/food_scenes/dish_1.tscn" id="2_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://b8f11wvixwy1t" path="res://assets/food_scenes/dish_2.tscn" id="2_wscrc"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
+[ext_resource type="Script" uid="uid://cdtsibcd8klnr" path="res://scene/world_environment.gd" id="3_gtqqq"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b64ug21hvkivr" path="res://scene/health_ui.tscn" id="7_p1hux"]
 [ext_resource type="PackedScene" uid="uid://bjgcqivkyhftr" path="res://assets/models/ceiling_light.tscn" id="7_smf0o"]
@@ -24,19 +26,16 @@
 [ext_resource type="Texture2D" uid="uid://km0sthj5tfkg" path="res://assets/models/updatedMap_Screenshot 2026-04-20 122034.png" id="21_p8adh"]
 [ext_resource type="Texture2D" uid="uid://djqlyvw7ysgr6" path="res://assets/models/updatedMap_omni.jpg" id="22_oldxj"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcbur"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gtqqq"]
+panorama = ExtResource("2_0d4pv")
 
-[sub_resource type="Sky" id="Sky_smf0o"]
-sky_material = SubResource("ProceduralSkyMaterial_jcbur")
+[sub_resource type="Sky" id="Sky_gn2wi"]
+sky_material = SubResource("PanoramaSkyMaterial_gtqqq")
 
 [sub_resource type="Environment" id="Environment_tv8i1"]
 background_mode = 2
-sky = SubResource("Sky_smf0o")
-ambient_light_color = Color(0.10747979, 0.107479714, 0.10747973, 1)
-ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.9
+sky = SubResource("Sky_gn2wi")
+ambient_light_source = 3
 glow_enabled = true
 glow_levels/2 = 1.0
 glow_levels/3 = 1.0
@@ -1234,6 +1233,7 @@ waiter = NodePath("NPC")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1617406650]
 environment = SubResource("Environment_tv8i1")
+script = ExtResource("3_gtqqq")
 
 [node name="ReadMarker" type="Marker3D" parent="." unique_id=1009630347]
 transform = Transform3D(-0.95773435, 0.28659073, 0.024714813, 0.027375568, 0.0052803867, 0.9996113, 0.2863488, 0.9580385, -0.012902784, 15.243442, 8.238899, -21.854935)
@@ -1278,7 +1278,7 @@ transform = Transform3D(1, -7.2759576e-11, -3.7252903e-09, -3.45608e-11, 1, 0, 0
 surface_material_override/0 = null
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994773, 0.0030360988, -0.030728607, 0.0027892347, 0.99995923, 0.008068904, 0.030752014, 0.007979682, -0.9994484, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728614, 0.0027892354, 0.9999593, 0.008068906, 0.030752024, 0.007979682, -0.99944866, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -1341,7 +1341,6 @@ mesh = SubResource("ArrayMesh_5q3ok")
 
 [node name="ceiling" type="MeshInstance3D" parent="updatedMap" unique_id=417626055]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
-visible = false
 mesh = SubResource("ArrayMesh_832cv")
 
 [node name="cover" type="MeshInstance3D" parent="updatedMap" unique_id=1929170427]
