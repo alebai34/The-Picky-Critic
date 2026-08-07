@@ -31,6 +31,8 @@ func update_score():
 	score = score + 1
 	score_label.text = str(score)
 	
+func screen_flash():
+	
 
 func _process(_delta):
 	return
