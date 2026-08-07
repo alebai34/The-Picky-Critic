@@ -15,10 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://csfpopm1x7rsw" path="res://scene/decline_button.tscn" id="9_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://bbx2r4er8y7yo" path="res://scene/compendium.tscn" id="9_k65ib"]
 [ext_resource type="PackedScene" uid="uid://criu63ikep0w3" path="res://assets/food_scenes/dish_4_fish.tscn" id="12_v2gmf"]
-<<<<<<< Updated upstream
-=======
-[ext_resource type="PackedScene" path="res://scene/pages/page3.tscn" id="13_0d4pv"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
 [ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
 [ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://scene/pause_menu.tscn" id="15_v2gmf"]
@@ -1259,11 +1255,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104588, 0, -22.78)
 curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
-<<<<<<< Updated upstream
 transform = Transform3D(-0.9994821, 3.3318804e-07, -0.03075898, 0, 0.9999954, 1.0831302e-05, 0.03075898, 1.08266095e-05, -0.9994821, -28.286642, 0.23918438, -16.15002)
-=======
-transform = Transform3D(-0.99989784, -1.0340642e-06, -0.010028834, -5.684047e-14, 0.99999416, -0.00010310017, 0.0100287795, -0.00010309915, -0.9999034, -35.306995, 0.27774996, -16.122303)
->>>>>>> Stashed changes
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -1284,7 +1276,7 @@ transform = Transform3D(1, -7.2759576e-11, -3.7252903e-09, -3.45608e-11, 1, 0, 0
 surface_material_override/0 = null
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728612, 0.0027892354, 0.9999593, 0.008068906, 0.030752024, 0.007979682, -0.9994486, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728614, 0.0027892354, 0.9999593, 0.008068906, 0.030752024, 0.007979682, -0.99944866, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -1345,7 +1337,6 @@ mesh = SubResource("ArrayMesh_5q3ok")
 
 [node name="ceiling" type="MeshInstance3D" parent="updatedMap" unique_id=417626055]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
-visible = false
 mesh = SubResource("ArrayMesh_832cv")
 
 [node name="cover" type="MeshInstance3D" parent="updatedMap" unique_id=1929170427]

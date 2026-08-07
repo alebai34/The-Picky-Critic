@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b6ttk3yiwum4p" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Script" uid="uid://chg4yqc20uvyb" path="res://scripts/dot_crosshair.gd" id="2_fvtld"]
-[ext_resource type="Script" uid="uid://cr6fw8g6lcw4k" path="res://scripts/damage_flash.gd" id="3_y30ri"]
 
 [node name="Player" type="Node3D" unique_id=1608918345]
 script = ExtResource("1_hjaqi")
@@ -36,9 +35,3 @@ script = ExtResource("2_fvtld")
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1547807182]
 offset_right = 40.0
 offset_bottom = 23.0
-
-[node name="DamageFlash" type="ColorRect" parent="CanvasLayer" unique_id=1181008010]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(1, 0, 0, 0)
-script = ExtResource("3_y30ri")

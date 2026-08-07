@@ -4,8 +4,6 @@ extends Node3D
 @onready var cam = $Camera3D
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 @onready var health: int = 1
-@onready var damage_flash: ColorRect = $CanvasLayer/DamageFlash
-
 
 var _held_xic: Node = null
 var sensitivity := 0.002
