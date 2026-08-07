@@ -4,11 +4,18 @@ signal close_book_requested
 signal pause_requested
 signal resume_requested
 signal health_changed
-
+signal safe
+signal not_safe
 var focused: bool = false
 var game_paused: bool = false
 var health: = 6
 
+func emit_safe():
+	emit_signal("safe")
+	
+func emit_not_safe():
+	emit_signal("not_safe")
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		if focused:
