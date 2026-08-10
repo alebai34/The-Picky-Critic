@@ -26,7 +26,7 @@ func interact():
 		else:
 			GameManager.emit_not_safe()
 			FoodHandler.player_lose_health()
-			GameManager.emit_screen_flash()
+			
 		queue_free()
 	else:
 		print("not ready to eat")
