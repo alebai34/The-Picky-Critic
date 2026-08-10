@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://doxhu5xfesrn1"]
+
+[ext_resource type="Script" uid="uid://dq2nua7tr6hbw" path="res://death_screen.gd" id="1_if853"]
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=329097941]
+script = ExtResource("1_if853")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=51265890]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1375504950]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1463641355]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="Panel" unique_id=764303826]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Label2" unique_id=1621299557]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Retry" type="Button" parent="Panel/Label2/VBoxContainer" unique_id=1594079416]
+layout_mode = 2
+text = "Retry"
+
+[node name="Quit" type="Button" parent="Panel/Label2/VBoxContainer" unique_id=1428704428]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Panel/Label2/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/Label2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

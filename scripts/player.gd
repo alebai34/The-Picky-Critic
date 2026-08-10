@@ -32,7 +32,7 @@ func update_score():
 	score_label.text = str(score)
 	
 func screen_flash():
-	
+	pass
 
 func _process(_delta):
 	return
