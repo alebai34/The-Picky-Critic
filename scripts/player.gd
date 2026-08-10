@@ -4,10 +4,12 @@ extends Node3D
 @onready var cam = $Camera3D
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 @onready var health: int = 1
+@onready var score_label = %ScoreLabel
 
 var _held_xic: Node = null
 var sensitivity := 0.002
 var can_look := true
+var score := 0
 
 signal health_changed(new_hp: int)
 
@@ -23,8 +25,16 @@ func _ready():
 	GameManager.pause_requested.connect(_on_pause_requested)
 	GameManager.resume_requested.connect(_on_resume_requested)
 	GameManager.close_book_requested.connect(_on_resume_requested)
+	GameManager.safe.connect(update_score)
+	
+func update_score():
+	score = score + 1
+	score_label.text = str(score)
+	
+func screen_flash():
+	
 
-func _process(delta):
+func _process(_delta):
 	return
 
 func _on_food_binned():
