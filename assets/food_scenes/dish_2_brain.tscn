@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_74o01"]
 [ext_resource type="PackedScene" uid="uid://ba3121j45lyc1" path="res://assets/models/Brain.glb" id="1_h4ulk"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_h4ulk"]
-radius = 0.37904266
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1mkh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irhai"]
 
@@ -44,11 +43,11 @@ shadow_mesh = SubResource("ArrayMesh_0f3vp")
 script = ExtResource("1_74o01")
 
 [node name="Brain" parent="." unique_id=2099187444 instance=ExtResource("1_h4ulk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.6720673, 0, 0, 0, 1, 0, 0.231202, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1302222142]
-transform = Transform3D(1.655, 0, 0, 0, 1.655, 0, 0, 0, 1.655, 0.02798462, 0.56161475, -0.085440874)
-shape = SubResource("SphereShape3D_h4ulk")
+transform = Transform3D(1.2302647, 0, 0, 0, 0.5599437, 0, 0, 0, 1.401088, 0.02798462, 0.4089874, -0.085440874)
+shape = SubResource("BoxShape3D_f1mkh")
 
 [node name="Plate" type="MeshInstance3D" parent="." unique_id=1745744529]
 transform = Transform3D(0.5, 0, 0, 0, 0.29229176, 0, 0, 0, 0.5, 0, 0.316, 0)

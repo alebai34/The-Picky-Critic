@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1r6p6mkecsfu"
-path="res://.godot/imported/sludge.glb-023d329234e82c9803d9aac90542c353.scn"
+uid="uid://cs73dourhlctg"
+path="res://.godot/imported/egg.glb-856b08b4f5cc41a2d8aa2eddc2ab2198.scn"
 
 [deps]
 
-source_file="res://assets/models/sludge.glb"
-dest_files=["res://.godot/imported/sludge.glb-023d329234e82c9803d9aac90542c353.scn"]
+source_file="res://assets/models/egg.glb"
+dest_files=["res://.godot/imported/egg.glb-856b08b4f5cc41a2d8aa2eddc2ab2198.scn"]
 
 [params]
 
@@ -37,9 +37,9 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 materials/extract=0
-materials/extract_format=2
+materials/extract_format=0
 materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://tb6kosw546ly"]
+
+[ext_resource type="Script" uid="uid://bm682qv3vrgcg" path="res://scripts/food.gd" id="1_tbmwp"]
+[ext_resource type="PackedScene" uid="uid://cs73dourhlctg" path="res://assets/models/egg.glb" id="2_82x53"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4h7i"]
+size = Vector3(1.0009766, 1.0404663, 1)
+
+[node name="Dish_7_egg" type="Area3D" unique_id=1091099015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1466487, 0, 0)
+script = ExtResource("1_tbmwp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1258604798]
+transform = Transform3D(0.68810993, 0, 0, 0, 1.1625053, 0, 0, 0, 0.60423625, -0.14657766, 0.63787585, 0)
+shape = SubResource("BoxShape3D_m4h7i")
+
+[node name="egg2" parent="." unique_id=1690702959 instance=ExtResource("2_82x53")]
+transform = Transform3D(0.123043425, 0, 0.11730437, 0, 0.17, 0, -0.11730437, 0, 0.123043425, -0.14926362, 1.1920929e-07, 0.009936839)

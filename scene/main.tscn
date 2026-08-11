@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bp72fk1qo031b" path="res://scripts/main.gd" id="1_4j5ol"]
 [ext_resource type="Texture2D" uid="uid://cu7delrgmv1vj" path="res://assets/images/Night0.exr" id="2_0d4pv"]
-[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://assets/food_scenes/dish_1.tscn" id="2_b5f6u"]
-[ext_resource type="PackedScene" uid="uid://b8f11wvixwy1t" path="res://assets/food_scenes/dish_2.tscn" id="2_wscrc"]
+[ext_resource type="PackedScene" uid="uid://pf8akc166urx" path="res://assets/food_scenes/dish_1_tentacle.tscn" id="2_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://b8f11wvixwy1t" path="res://assets/food_scenes/dish_2_brain.tscn" id="2_wscrc"]
 [ext_resource type="PackedScene" uid="uid://crgb3ns4ou8f0" path="res://scene/Player.tscn" id="3_brvut"]
 [ext_resource type="Script" uid="uid://cdtsibcd8klnr" path="res://scene/world_environment.gd" id="3_gtqqq"]
 [ext_resource type="PackedScene" uid="uid://d14y76ebs5o6i" path="res://scene/npc.tscn" id="5_4j5ol"]
@@ -18,8 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://c6jtmbvbvqa7" path="res://scene/pages/page3.tscn" id="13_0d4pv"]
 [ext_resource type="PackedScene" uid="uid://co2uvbj7g41dm" path="res://assets/food_scenes/dish_3_sand_witch.tscn" id="13_mswub"]
 [ext_resource type="PackedScene" uid="uid://240fvf8al7ya" path="res://assets/food_scenes/dish_3_sandwich.tscn" id="14_hybxs"]
+[ext_resource type="PackedScene" uid="uid://d0pkui8nx8koj" path="res://assets/food_scenes/dish_5_pixie_dust.tscn" id="14_oldxj"]
+[ext_resource type="PackedScene" uid="uid://3rk6uubmb5da" path="res://assets/food_scenes/dish_6_sludge.tscn" id="15_4jm02"]
 [ext_resource type="PackedScene" uid="uid://df4fadhukpd5" path="res://scene/pause_menu.tscn" id="15_v2gmf"]
 [ext_resource type="PackedScene" uid="uid://b1qn4h075m7qh" path="res://scene/book.tscn" id="16_gtqqq"]
+[ext_resource type="PackedScene" uid="uid://tb6kosw546ly" path="res://assets/food_scenes/dish_7_egg.tscn" id="16_vneqc"]
 [ext_resource type="Texture2D" uid="uid://cu2m0nyagpjlt" path="res://assets/models/updatedMap_ConcreteStucco0254_2_350.jpg" id="18_0d4pv"]
 [ext_resource type="Texture2D" uid="uid://bcn01d78sw166" path="res://assets/models/updatedMap_Reshape-SHIFT2335.jpg" id="19_gtqqq"]
 [ext_resource type="Texture2D" uid="uid://bdi6jp7rqlr2v" path="res://assets/models/updatedMap_IMG_0107 - Copy - Copy - Copy - Copy.jpg" id="20_gn2wi"]
@@ -1264,7 +1267,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104588, 0, -22.78)
 curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
-transform = Transform3D(-0.9998979, -1.0340642e-06, -0.010028834, -5.6840475e-14, 0.99999416, -0.00010310017, 0.0100287795, -0.00010309915, -0.9999034, -35.306995, 0.27774996, -16.122303)
+transform = Transform3D(-0.9998973, -1.0340642e-06, -0.010028834, -5.684044e-14, 0.99999416, -0.00010310017, 0.010028774, -0.00010309915, -0.9999034, -35.306995, 0.27774996, -16.122303)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
@@ -1285,8 +1288,8 @@ transform = Transform3D(1, -7.2759576e-11, -3.7252903e-09, -3.45608e-11, 1, 0, 0
 surface_material_override/0 = null
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728612, 0.0027892354, 0.9999593, 0.008068906, 0.030752024, 0.007979682, -0.9994486, -16.559774, 0.05471419, 21.04017)
-foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf")])
+transform = Transform3D(-0.9994776, 0.003036099, -0.030728607, 0.0027892354, 0.9999593, 0.008068904, 0.030752024, 0.007979682, -0.9994484, -16.559774, 0.05471419, 21.04017)
+foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf"), ExtResource("14_oldxj"), ExtResource("15_4jm02"), ExtResource("16_vneqc")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
 
