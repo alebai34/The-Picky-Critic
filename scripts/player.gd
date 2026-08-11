@@ -26,12 +26,17 @@ func _ready():
 	GameManager.resume_requested.connect(_on_resume_requested)
 	GameManager.close_book_requested.connect(_on_resume_requested)
 	GameManager.safe.connect(update_score)
+	GameManager.not_safe.connect(screen_flash)
 	
 func update_score():
 	score = score + 1
 	score_label.text = str(score)
 	
 func screen_flash():
+	var ap = get_node_or_null("CanvasLayer/ColourFlash/AnimationPlayer")
+	if ap:
+		ap.play("take_damage")
+
 	pass
 
 func _process(_delta):

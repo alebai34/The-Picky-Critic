@@ -18,8 +18,7 @@ func emit_safe():
 func emit_not_safe():
 	emit_signal("not_safe")
 	
-func emit_screen_flash():
-	emit_signal("flash")
+
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
