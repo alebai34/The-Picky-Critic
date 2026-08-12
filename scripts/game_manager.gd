@@ -10,7 +10,7 @@ signal flash
 
 var focused: bool = false
 var game_paused: bool = false
-var health: = 6
+var health: = 1 # at 1 for debugging
 
 func emit_safe():
 	emit_signal("safe")
@@ -33,3 +33,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func lose_health(amount):
 	health-=amount
 	emit_signal("health_changed")
+	if health <= 0:
+		await get_tree().process_frame
+		get_tree().change_scene_to_file("res://death_screen.tscn")
+		

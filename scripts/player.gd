@@ -14,7 +14,7 @@ var score := 0
 signal health_changed(new_hp: int)
 
 func die():
-	print("you die")
+	get_tree().change_scene_to_file("res://death_screen.tscn")
 	return
 	#get_tree().reload_current_scene()
 

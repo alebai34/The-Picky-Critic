@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://doxhu5xfesrn1"]
+
+[ext_resource type="Script" uid="uid://dq2nua7tr6hbw" path="res://death_screen.gd" id="1_4gfsm"]
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=329097941]
+script = ExtResource("1_4gfsm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=51265890]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="." unique_id=1375504950]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.5
+offset_top = -106.75
+offset_right = 111.5
+offset_bottom = 106.75
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=727683996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1621299557]
+layout_mode = 2
+
+[node name="Retry" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1594079416]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Retry"
+
+[node name="Quit" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1428704428]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
