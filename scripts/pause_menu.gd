@@ -4,16 +4,20 @@
 extends CanvasLayer
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	hide()
 	GameManager.pause_requested.connect(_on_pause_requested)
 	GameManager.resume_requested.connect(_on_resume_requested)
+	
 
 func _on_pause_requested():
 	visible = true
+	get_tree().paused = true
 	GameManager.game_paused = true
 
 func _on_resume_requested():
 	visible = false
+	get_tree().paused = false
 	GameManager.game_paused = false
 
 func _on_resume_pressed() -> void:

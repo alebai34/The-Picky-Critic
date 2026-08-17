@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://doxhu5xfesrn1"]
+[gd_scene format=3 uid="uid://b3ax3pmn1lqvr"]
 
-[ext_resource type="Script" uid="uid://dq2nua7tr6hbw" path="res://death_screen.gd" id="1_4gfsm"]
+[ext_resource type="Script" uid="uid://dq2nua7tr6hbw" path="res://scripts/death_screen.gd" id="1_4gfsm"]
 
 [node name="DeathScreen" type="CanvasLayer" unique_id=329097941]
 script = ExtResource("1_4gfsm")
@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+color = Color(1, 0.19215687, 0.19607843, 0.16862746)
 
 [node name="Panel" type="Panel" parent="." unique_id=1375504950]
 anchors_preset = 8

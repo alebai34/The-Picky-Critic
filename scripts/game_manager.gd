@@ -7,6 +7,7 @@ signal health_changed
 signal safe
 signal not_safe
 signal flash
+signal dead
 
 var focused: bool = false
 var game_paused: bool = false
@@ -31,9 +32,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func lose_health(amount):
-	health-=amount
+	health -= amount
 	emit_signal("health_changed")
 	if health <= 0:
 		await get_tree().process_frame
-		get_tree().change_scene_to_file("res://death_screen.tscn")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		emit_signal("dead")
+		
 		
