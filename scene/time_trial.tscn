@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bh5bjdp0v8e78"]
+
+[ext_resource type="Script" uid="uid://yu2uoonbs86t" path="res://scene/time_trial.gd" id="1_770p3"]
+
+[node name="TimeTrial" type="CanvasLayer" unique_id=362795539]
+script = ExtResource("1_770p3")
+
+[node name="Label" type="Label" parent="." unique_id=1131055879]
+offset_left = 879.0
+offset_top = 558.0
+offset_right = 1019.0
+offset_bottom = 646.0
+theme_override_colors/font_color = Color(0.71000004, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=342345630]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

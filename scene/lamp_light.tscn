@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://th2dxr57bj5s" path="res://assets/models/Lamp2.glb" id="1_w1kfo"]
 [ext_resource type="Script" uid="uid://dxj56bd5e27q7" path="res://scripts/omni_light.gd" id="2_h21le"]
 [ext_resource type="Material" uid="uid://djrrwj2gxi4u" path="res://resource/emissive_material.tres" id="2_l77ll"]
-[ext_resource type="Shader" uid="uid://nomyn37efqw3" path="res://scene/lamp_light.gdshader" id="3_l77ll"]
+[ext_resource type="Shader" path="res://scene/lamp_light.gdshader" id="3_l77ll"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vbv6m"]
 render_priority = 0
@@ -14,18 +14,23 @@ shader = ExtResource("3_l77ll")
 [node name="Lamp" parent="." unique_id=1756910365 instance=ExtResource("1_w1kfo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5273104, 0)
 
-[node name="light" parent="Lamp" index="2" unique_id=213774677]
+[node name="light" parent="Lamp" index="2" unique_id=866094870]
 material_override = ExtResource("2_l77ll")
 surface_material_override/0 = SubResource("ShaderMaterial_vbv6m")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1841106648]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -1.1)
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1899004046]
+transform = Transform3D(1, 9.313226e-10, 2.8926175e-18, 0, -4.3929504e-08, 1, 9.313226e-10, -1, -4.3929504e-08, -0.00038528442, -0.055546187, -1.0991445)
 light_color = Color(1, 0.8352941, 0.5019608, 1)
-light_energy = 3.0
+light_energy = 5.0
+light_indirect_energy = 4.485
+light_volumetric_fog_energy = 1.82
 light_bake_mode = 1
 shadow_enabled = true
+shadow_bias = 0.144
 shadow_blur = 0.3
 spot_range = 4096.0
+spot_attenuation = 0.41
+spot_angle = 53.91
 script = ExtResource("2_h21le")
 
 [editable path="Lamp"]

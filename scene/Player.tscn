@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b6ttk3yiwum4p" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Script" uid="uid://chg4yqc20uvyb" path="res://scripts/dot_crosshair.gd" id="2_fvtld"]
 [ext_resource type="PackedScene" uid="uid://b3ax3pmn1lqvr" path="res://scene/death_screen.tscn" id="3_y30ri"]
+[ext_resource type="PackedScene" uid="uid://bh5bjdp0v8e78" path="res://scene/time_trial.tscn" id="4_waelg"]
 
 [sub_resource type="Animation" id="Animation_62i1b"]
 length = 0.001
@@ -97,3 +98,5 @@ libraries/ = SubResource("AnimationLibrary_waelg")
 autoplay = &"RESET"
 
 [node name="DeathScreen" parent="." unique_id=329097941 instance=ExtResource("3_y30ri")]
+
+[node name="TimeTrial" parent="." unique_id=362795539 instance=ExtResource("4_waelg")]

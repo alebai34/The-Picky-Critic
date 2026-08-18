@@ -54,5 +54,14 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
 
+[node name="Label" type="Label" parent="Panel" unique_id=1632260819]
+layout_mode = 0
+offset_left = -1.5
+offset_top = -100.0
+offset_right = 215.5
+offset_bottom = -77.0
+scale = Vector2(3, 3)
+text = "YOU DIED"
+
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
