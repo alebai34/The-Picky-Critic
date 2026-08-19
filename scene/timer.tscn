@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bh5bjdp0v8e78"]
 
-[ext_resource type="Script" uid="uid://yu2uoonbs86t" path="res://scene/time_trial.gd" id="1_770p3"]
+[ext_resource type="Script" uid="uid://yu2uoonbs86t" path="res://scripts/time_trial.gd" id="1_770p3"]
 
 [node name="TimeTrial" type="CanvasLayer" unique_id=362795539]
 script = ExtResource("1_770p3")

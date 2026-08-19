@@ -38,5 +38,3 @@ func lose_health(amount):
 		await get_tree().process_frame
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		emit_signal("dead")
-		
-		

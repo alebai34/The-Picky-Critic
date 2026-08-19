@@ -14,6 +14,6 @@ func _on_quit_pressed() -> void:
 
 
 func _on_records_pressed() -> void:
-	
+	get_tree().change_scene_to_file("res://scene/records.tscn")
 	
 	pass
