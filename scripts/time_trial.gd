@@ -19,4 +19,5 @@ func update_label() -> void:
 func _on_player_died() -> void:
 	running = false
 	$Timer.stop()
-	RecordsManager.add_record(total_time_in_secs)
+	# don't save yet — just stop the clock and hold the value
+	

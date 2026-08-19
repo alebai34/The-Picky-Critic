@@ -6,9 +6,10 @@ var records: Array = [] # [{ "time": float, "date": String }, ...]
 func _ready() -> void:
 	load_records()
 
-func add_record(time_in_secs: float) -> void:
+func add_record(time_in_secs: float, player_name: String) -> void:
 	records.append({
 		"time": time_in_secs,
+		"name": player_name,
 		"date": Time.get_datetime_string_from_system()
 	})
 	records.sort_custom(func(a, b): return a["time"] < b["time"])
