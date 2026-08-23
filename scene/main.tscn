@@ -1087,7 +1087,7 @@ layers = 2
 text = "Left and Right Arrow to Move"
 
 [node name="Player" parent="." unique_id=1608918345 instance=ExtResource("3_brvut")]
-transform = Transform3D(-0.99982095, -7.2759576e-11, 0.018918253, -4.0017767e-11, 1, 0, -0.01891825, 0, -0.99982095, 10.790113, 9.692497, -30.214413)
+transform = Transform3D(-0.99982095, -7.2759576e-11, 0.018918253, -4.0017767e-11, 1, 0, -0.01891825, 0, -0.99982095, 11.789934, 9.692497, -30.195494)
 
 [node name="Camera3D" parent="Player" index="0" unique_id=918874127]
 cull_mask = 1048573
@@ -1097,13 +1097,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104588, 0, -22.78)
 curve = SubResource("Curve3D_p1hux")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2068068259]
-transform = Transform3D(-0.99989676, -1.0340642e-06, -0.010028834, -5.684041e-14, 0.99999416, -0.00010310017, 0.010028768, -0.00010309915, -0.9999034, -35.306995, 0.27774996, -16.122303)
+transform = Transform3D(-0.9998966, -1.0340642e-06, -0.010028834, -5.68404e-14, 0.99999416, -0.00010310017, 0.0100287665, -0.00010309915, -0.9999034, -35.306995, 0.27774996, -16.122303)
 
 [node name="HealthUI" parent="." unique_id=468354661 instance=ExtResource("7_p1hux")]
 metadata/_edit_use_anchors_ = true
 
 [node name="NPC" parent="." unique_id=1006315584 instance=ExtResource("5_4j5ol")]
-transform = Transform3D(-0.9994776, 0.003036099, -0.030728603, 0.0027892354, 0.9999593, 0.008068903, 0.030752024, 0.007979682, -0.9994483, -16.559774, 0.05471419, 21.04017)
+transform = Transform3D(-0.9994776, 0.003036099, -0.0307286, 0.0027892354, 0.9999593, 0.008068903, 0.030752024, 0.007979682, -0.99944824, -16.559774, 0.05471419, 21.04017)
 foods = Array[PackedScene]([ExtResource("2_b5f6u"), ExtResource("2_wscrc"), ExtResource("14_hybxs"), ExtResource("13_mswub"), ExtResource("12_v2gmf"), ExtResource("14_oldxj"), ExtResource("15_4jm02"), ExtResource("16_vneqc")])
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NPC" unique_id=901586292]
@@ -1155,7 +1155,6 @@ mesh = SubResource("ArrayMesh_5q3ok")
 
 [node name="ceiling" type="MeshInstance3D" parent="updatedMap" unique_id=417626055]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
-visible = false
 mesh = SubResource("ArrayMesh_832cv")
 
 [node name="farRightWall" type="MeshInstance3D" parent="updatedMap" unique_id=896800169]
