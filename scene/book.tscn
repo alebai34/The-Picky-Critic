@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b1qn4h075m7qh"]
 
-[ext_resource type="Script" uid="uid://bg04ypkmwg73i" path="res://book.gd" id="1_mftuw"]
+[ext_resource type="Script" uid="uid://bg04ypkmwg73i" path="res://scripts/book.gd" id="1_mftuw"]
 [ext_resource type="Texture2D" uid="uid://cxt2s2teot7tr" path="res://assets/images/EledoneCirrhosa.jpg" id="2_7pxmv"]
-[ext_resource type="Texture2D" uid="uid://8imjf1cjqj0s" path="res://assets/images/bioluminatie blue.png" id="2_rnek7"]
+[ext_resource type="Texture2D" uid="uid://24kn8iurbckr" path="res://assets/images/bioluminatie blue2.png" id="2_rnek7"]
 [ext_resource type="Texture2D" uid="uid://dc7gx6lfjqj6x" path="res://assets/images/bioluminatie green.png" id="3_5ynty"]
 [ext_resource type="Texture2D" uid="uid://dtcwqen0c55lo" path="res://assets/images/bioluminatie blue.jpg" id="3_sem1a"]
 [ext_resource type="Texture2D" uid="uid://1sx43vq4igk8" path="res://assets/images/EledoneCirrhosa.png" id="5_rdmoc"]
